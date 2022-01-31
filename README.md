@@ -18,3 +18,10 @@ eventos pagos le parezcan más relevantes.
 ## Diagrama de contenedores
 
 ![Diagrama de contenedores](images/c4/contenedores.png)
+
+## Diagrama de componentes
+
+### Interfaz de usuario
+
+![Diagrama de componentes GUI](images/c4/componentesGUI.png)
+
