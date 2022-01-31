@@ -11,5 +11,10 @@ eventos pagos le parezcan más relevantes.
 
 # C4
 
+## Diagrama de contexto
+
 ![Diagrama de contexto](images/c4/contexto.png)
 
+## Diagrama de contenedores
+
+![Diagrama de contenedores](images/c4/contenedores.png)
