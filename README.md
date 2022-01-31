@@ -11,6 +11,8 @@ eventos pagos le parezcan más relevantes.
 
 # Base de datos (MongoDB)
 
+El motor de base de datos a utilizar es MondoDB
+
 ![Digrama de base de datos](images/database/basededatos.png) 
 
 # C4
