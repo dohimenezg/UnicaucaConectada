@@ -29,6 +29,10 @@ eventos pagos le parezcan más relevantes.
 
 ![Diagrama de componentes Backend](images/c4/componentesBackend.png)
 
+# Base de datos (MongoDB)
+
+![Digrama de base de datos](images/database/basededatos.png)
+
 # Equipo de desarrollo
 
 El equipo de desarrollo de Unicauca Conetada esta integrado por:  
