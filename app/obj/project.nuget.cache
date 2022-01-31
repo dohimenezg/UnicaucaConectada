@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ejQoWshZ1RsEZCfsTPtP9QJiINqQE74JQ2MuUv4MUq8XlrXkARCjhTNZonZUGBAg1O5WkfMwV+nDuIv4vCnOkA==",
+  "success": true,
+  "projectFilePath": "/home/david/Unicauca/UnicaucaConectada/app/app.csproj",
+  "expectedPackageFiles": [
+    "/home/david/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.0/microsoft.aspnetcore.app.ref.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
