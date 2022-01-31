@@ -17,6 +17,15 @@ El motor de base de datos a utilizar es MondoDB
 
 # C4
 
+Se hace uso de modelos C4 para representar la arquitectura de la aplicación en
+diferentes niveles de abstracción: 
+
+1. Diagrama de contexto
+2. Diagrama de contenedores
+3. Diagrama de componentes
+  * Interfaz de usuario
+  * Backend 
+
 ## Diagrama de contexto
 
 ![Diagrama de contexto](images/c4/contexto.png)
