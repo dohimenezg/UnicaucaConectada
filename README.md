@@ -9,6 +9,10 @@ estudiantes por medio de notificaciones. Se planea seguir un modelo basado en
 calificaciones para ayudar a los estudiantes a escoger con mayor fiabilidad qué
 eventos pagos le parezcan más relevantes.
 
+# Base de datos (MongoDB)
+
+![Digrama de base de datos](images/database/basededatos.png) 
+
 # C4
 
 ## Diagrama de contexto
@@ -28,10 +32,6 @@ eventos pagos le parezcan más relevantes.
 ### Backend
 
 ![Diagrama de componentes Backend](images/c4/componentesBackend.png)
-
-# Base de datos (MongoDB)
-
-![Digrama de base de datos](images/database/basededatos.png)
 
 # Equipo de desarrollo
 
