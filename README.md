@@ -11,5 +11,5 @@ eventos pagos le parezcan más relevantes.
 
 # C4
 
-![Diagrama de contesto](.images/c4/contexto.png)
+![Diagrama de contexto](images/c4/contexto.png)
 
