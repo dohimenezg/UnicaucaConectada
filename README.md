@@ -9,7 +9,7 @@ estudiantes por medio de notificaciones. Se planea seguir un modelo basado en
 calificaciones para ayudar a los estudiantes a escoger con mayor fiabilidad qué
 eventos pagos le parezcan más relevantes.
 
-# Base de datos (MongoDB)
+# Base de datos
 
 El motor de base de datos a utilizar es MondoDB
 
