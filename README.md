@@ -23,8 +23,8 @@ diferentes niveles de abstracción:
 1. Diagrama de contexto
 2. Diagrama de contenedores
 3. Diagrama de componentes
-  * Interfaz de usuario
-  * Backend 
+    * Interfaz de usuario
+    * Backend 
 
 ## Diagrama de contexto
 
