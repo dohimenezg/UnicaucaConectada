@@ -1,4 +1,5 @@
 # Unicauca Conectada
+
 Unicauca Conectada es un proyecto cuyo fin es implementar una aplicación de
 escritorio para acceder a todos los eventos en la Universidad. La aplicación
 utiliza un enfoque que permite a los usuarios publicar, etiquetar y encontrar
@@ -7,3 +8,8 @@ aplicación también proporciona a los organizadores una forma de contactar a lo
 estudiantes por medio de notificaciones. Se planea seguir un modelo basado en
 calificaciones para ayudar a los estudiantes a escoger con mayor fiabilidad qué
 eventos pagos le parezcan más relevantes.
+
+# C4
+
+![Diagrama de contesto](.images/c4/contexto.png)
+
