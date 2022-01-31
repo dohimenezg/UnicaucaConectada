@@ -25,7 +25,7 @@ eventos pagos le parezcan más relevantes.
 
 ![Diagrama de componentes GUI](images/c4/componentesGUI.png)
 
-###
+### Backend
 
 ![Diagrama de componentes Backend](images/c4/componentesBackend.png)
 
