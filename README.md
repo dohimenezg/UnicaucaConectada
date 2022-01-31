@@ -29,3 +29,10 @@ eventos pagos le parezcan más relevantes.
 
 ![Diagrama de componentes Backend](images/c4/componentesBackend.png)
 
+# Equipo de desarrollo
+
+El equipo de desarrollo de Unicauca Conetada esta integrado por: \
+- [`David Jiménez`](https://github.com/dohimenezg)
+- [`Julian Ordoñez`](https://github.com/juleMay)
+- [`Daniel Pastas`](https://github.com/pdaniel102)
+
