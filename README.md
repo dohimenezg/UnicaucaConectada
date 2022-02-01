@@ -7,15 +7,16 @@ eventos fácilmente, así como seguir a los organizadores de eventos. La
 aplicación también proporciona a los organizadores una forma de contactar a los
 estudiantes por medio de notificaciones. Se planea seguir un modelo basado en
 calificaciones para ayudar a los estudiantes a escoger con mayor fiabilidad qué
-eventos pagos le parezcan más relevantes.
-
-# Vista de módulos (UML)
-
-![MVT](images/model/mvt.png)
+eventos pagos le parezcan más relevantes. \
+MongoDB Atlas, C#, .NET
 
 # Vista de componentes y conectores
 
 ![Componentes y conectores](images/model/c&c.png)
+
+# Vista de módulos (UML)
+
+![MVT](images/model/mvt.png)
 
 # Vista de instalación (UML)
 
