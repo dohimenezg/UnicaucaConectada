@@ -9,9 +9,17 @@ estudiantes por medio de notificaciones. Se planea seguir un modelo basado en
 calificaciones para ayudar a los estudiantes a escoger con mayor fiabilidad qué
 eventos pagos le parezcan más relevantes.
 
-# Vista de módulos
+# Vista de módulos (UML)
 
 ![MVT](images/model/mvt.png)
+
+# Vista de componentes y conectores
+
+![Componentes y conectores](images/model/c&c.png)
+
+# Vista de instalación (UML)
+
+![Instalacion](images/model/instalacion.png)
 
 # Base de datos
 
