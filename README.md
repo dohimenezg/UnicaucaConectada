@@ -10,6 +10,15 @@ calificaciones para ayudar a los estudiantes a escoger con mayor fiabilidad qué
 eventos pagos le parezcan más relevantes. \
 MongoDB Atlas, C#, .NET
 
+# Arquitectura
+
+Se decidió aplicar un diseño arquitectónico por capas por ventajas como:
+* Fácil de entender para equipos nuevos en el desarrollo de software.
+* Versatilidad a la hora de desarrollar software con cortos plazos de entrega.
+* Flexibilidad para realizar mantenimiento.
+Adicionalmente, los miembros del equipo tiene algo de experiencia con esta
+arquitectura y otras afines tales con MVC.
+
 # Vista de componentes y conectores
 
 ![Componentes y conectores](images/model/c&c.png)
