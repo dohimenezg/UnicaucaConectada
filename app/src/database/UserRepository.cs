@@ -75,5 +75,8 @@ public class UserRepository : IUserRepository
         this.client = client;
         this.database = database;
         this.collection = (IMongoCollection<User>)UsersDB;
+
+        var options = new CreateIndexOptions { Unique = true };
+        collection.Indexes.CreateOne("{ username : 1 }", options);
     }
 }

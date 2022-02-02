@@ -39,6 +39,10 @@ public class EventRepository : IEventRepository
     }
     public Boolean updateEvent(Event updatedEvent)
     {
+        if (updatedEvent == null)
+        {
+            return false;
+        }
         var filter = Builders<Event>.Filter.Eq("id", updatedEvent.id);
         var ret = collection.ReplaceOne(filter, updatedEvent);
 
@@ -63,7 +67,7 @@ public class EventRepository : IEventRepository
 
 
 
-    private void initDB()
+    private async void initDB()
     {
         
         var client = new MongoClient(settings);
@@ -75,5 +79,8 @@ public class EventRepository : IEventRepository
         this.client = client;
         this.database = database;
         this.collection = (IMongoCollection<Event>)eventsDB;
+
+        var options = new CreateIndexOptions { Unique = true };
+        collection.Indexes.CreateOne("{ title : 1 }", options);
     }
 }
