@@ -1,10 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using MongoDB.Driver;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Unicauca Conectada");
 
 
-var myNewUser = new User() { nombre = "David", nombre_usuario = "dohimenez", contrasena = "pass123", correo = "ojime@unicauca.edu.co"};
+var myNewUser = new User() { nombre = "David", nombre_usuario = "dohimenez", contrasena = "pass123", correo = "djimenezg@unicauca.edu.co"};
 EventRepository EventRepository = new EventRepository();
 
 //Event event1 = new Event("Matriculas2022", "Inicio de matriculas del 2do periodo de 2022", DateTime.Parse("2022-02-01"), DateTime.Parse("2022-02-03"));

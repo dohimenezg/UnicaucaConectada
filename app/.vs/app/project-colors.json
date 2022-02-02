@@ -5,7 +5,17 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "2c3259f0-5ae0-4f67-959a-2744d4fe9005": {
+      "ProjectGuid": "2c3259f0-5ae0-4f67-959a-2744d4fe9005",
+      "DisplayName": "app",
+      "ColorIndex": 0
+    },
+    "677a5d1e-daa8-49ef-b0c8-374dfe70e370": {
+      "ProjectGuid": "677a5d1e-daa8-49ef-b0c8-374dfe70e370",
+      "DisplayName": "uTest",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 2
 }
