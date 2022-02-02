@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "ejQoWshZ1RsEZCfsTPtP9QJiINqQE74JQ2MuUv4MUq8XlrXkARCjhTNZonZUGBAg1O5WkfMwV+nDuIv4vCnOkA==",
+  "dgSpecHash": "UAvteKARogiqW0Gpgo0hV32tIs4DYpYs8TnXH9oFIJbj7wvhAzVV9izbbn74b8C1EGeky3rEgeFG+qAVOvAi8Q==",
   "success": true,
-  "projectFilePath": "/home/david/Unicauca/UnicaucaConectada/app/app.csproj",
+  "projectFilePath": "E:\\HDD1B\\Sistemas\\IS2_Flor\\UnicaucaConectada\\app\\app.csproj",
   "expectedPackageFiles": [
-    "/home/david/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.0/microsoft.aspnetcore.app.ref.6.0.0.nupkg.sha512"
+    "C:\\Users\\Dagon\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
+    "C:\\Users\\Dagon\\.nuget\\packages\\mongodb.bson\\2.14.1\\mongodb.bson.2.14.1.nupkg.sha512",
+    "C:\\Users\\Dagon\\.nuget\\packages\\mongodb.driver\\2.14.1\\mongodb.driver.2.14.1.nupkg.sha512",
+    "C:\\Users\\Dagon\\.nuget\\packages\\mongodb.driver.core\\2.14.1\\mongodb.driver.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Dagon\\.nuget\\packages\\mongodb.libmongocrypt\\1.3.0\\mongodb.libmongocrypt.1.3.0.nupkg.sha512",
+    "C:\\Users\\Dagon\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
+    "C:\\Users\\Dagon\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Dagon\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

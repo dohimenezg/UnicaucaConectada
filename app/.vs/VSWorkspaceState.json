@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\database",
+    "\\src\\logic",
+    "\\src\\presentation"
+  ],
+  "SelectedNode": "\\src\\logic\\Event.cs",
+  "PreviewInSolutionExplorer": false
+}
