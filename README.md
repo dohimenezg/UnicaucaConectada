@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="450px" src="images/logo.png">
+  <img width="300px" src="images/logo.png">
 </p>
 
 # Unicauca Conectada
