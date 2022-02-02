@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="300px" src="images/logo.png">
+</p>
+
 # Unicauca Conectada
 
 Unicauca Conectada es un proyecto cuyo fin es implementar una aplicación de

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\HDD1B\\Sistemas\\IS2_Flor\\UnicaucaConectada\\app\\app.csproj": {}
+    "C:\\Users\\julia\\Documents\\UnicaucaConectada\\app\\app.csproj": {}
   },
   "projects": {
-    "E:\\HDD1B\\Sistemas\\IS2_Flor\\UnicaucaConectada\\app\\app.csproj": {
+    "C:\\Users\\julia\\Documents\\UnicaucaConectada\\app\\app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HDD1B\\Sistemas\\IS2_Flor\\UnicaucaConectada\\app\\app.csproj",
+        "projectUniqueName": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\app\\app.csproj",
         "projectName": "app",
-        "projectPath": "E:\\HDD1B\\Sistemas\\IS2_Flor\\UnicaucaConectada\\app\\app.csproj",
-        "packagesPath": "C:\\Users\\Dagon\\.nuget\\packages\\",
-        "outputPath": "E:\\HDD1B\\Sistemas\\IS2_Flor\\UnicaucaConectada\\app\\obj\\",
+        "projectPath": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\app\\app.csproj",
+        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
