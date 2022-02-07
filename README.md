@@ -64,7 +64,7 @@ diferentes niveles de abstracción:
 
 ### Interfaz de usuario
 
-![Diagrama de componentes GUI](images/c4/componentesGUI.png)
+![Diagrama de componentes GUI](images/c4/C4_componentesGUI.png)
 
 ### Backend
 
