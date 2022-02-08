@@ -33,7 +33,7 @@ arquitectura y otras afines tales con MVC.
 
 # Vista de instalación (UML)
 
-![Instalacion](images/model/instalacion.png)
+![Instalacion](images/model/MODEL_instalacion.jpg)
 
 # Base de datos
 
