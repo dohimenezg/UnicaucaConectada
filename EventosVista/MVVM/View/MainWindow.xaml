@@ -1,0 +1,56 @@
+﻿<Window x:Class="EventosVista.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventosVista"
+        mc:Ignorable="d"
+        Background="#283F4D"
+        WindowStyle="None"
+        Title="UnicaucaConectada" Height="720" Width="1280"
+        ResizeMode="NoResize">
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <TabPanel>
+                <RadioButton
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}">
+                    <WrapPanel>
+                        <Image Source="/Images/apps.png" Width="30" Height="30" Margin="5"/>
+                        <TextBlock Text="Unicauca&#x0a;Conectada" Margin="5"/>
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Margin="750,0,-750,0">
+                    <WrapPanel>
+                        <Image Source="/Images/plus.png" Width="30" Height="30" Margin="5"/>
+                        <TextBlock Text="Nuevo Evento" Margin="5"/>
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Margin="750,0,-750,0">
+                    <WrapPanel>
+                        <Image Source="/Images/bell.png" Width="30" Height="30" Margin="5"/>
+                        <TextBlock Text="Notificaciones" Margin="5"/>
+                    </WrapPanel>
+                </RadioButton>
+                <RadioButton Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Margin="750,0,-750,0">
+                    <WrapPanel>
+                        <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
+                        <TextBlock Text="Iniciar Sesión" Margin="5"/>
+                    </WrapPanel>
+                </RadioButton>
+            </TabPanel>
+        </Grid>
+    </DockPanel>
+</Window>
