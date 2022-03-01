@@ -10,7 +10,7 @@
                             <TextBox Margin="1" 
                                      Text="{TemplateBinding Text}"
                                      BorderThickness="0"
-                                     
+                                     FontSize="15"
                                      VerticalAlignment="Center"
                                      Padding="5"
                                      Foreground="Black"
