@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventosVista", "EventosVista\EventosVista.csproj", "{440A5C32-1360-4A2F-BA0D-17459A5EE96E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventosVista", "EventosVista.csproj", "{9FEB3A6F-3676-4D0E-A3FD-8B0C17886977}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{440A5C32-1360-4A2F-BA0D-17459A5EE96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{440A5C32-1360-4A2F-BA0D-17459A5EE96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{440A5C32-1360-4A2F-BA0D-17459A5EE96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{440A5C32-1360-4A2F-BA0D-17459A5EE96E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FEB3A6F-3676-4D0E-A3FD-8B0C17886977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FEB3A6F-3676-4D0E-A3FD-8B0C17886977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FEB3A6F-3676-4D0E-A3FD-8B0C17886977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FEB3A6F-3676-4D0E-A3FD-8B0C17886977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6B97CBA2-4571-4672-929E-860E9A91A06E}
+		SolutionGuid = {239C0837-0E7D-4384-89CD-620719F089A4}
 	EndGlobalSection
 EndGlobal

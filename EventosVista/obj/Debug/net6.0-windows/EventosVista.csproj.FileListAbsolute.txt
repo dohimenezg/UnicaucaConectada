@@ -116,3 +116,4 @@ E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\EventosVista.Assembly
 E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\EventosVista.csproj.CoreCompileInputs.cache
 E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\EventosVista.csproj.CopyComplete
 E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\EventosVista.genruntimeconfig.cache
+E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\Theme\TextboxTheme.baml

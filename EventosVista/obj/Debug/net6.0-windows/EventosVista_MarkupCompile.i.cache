@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 E:\HDD1B\Sistemas\UC\EventosVista\App.xaml
-5-1705356631
+61668283637
 
 16-1024285205
 200-1683001024
-MVVM\View\EventView.xaml;MVVM\View\LogInView.xaml;MVVM\View\MainWindow.xaml;Theme\MenuButtonTheme.xaml;Theme\ThemeName.ListViewTheme.xaml;
+MVVM\View\EventView.xaml;MVVM\View\LogInView.xaml;MVVM\View\MainWindow.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;Theme\ThemeName.ListViewTheme.xaml;
 
 True
 
