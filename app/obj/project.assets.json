@@ -389,19 +389,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\julia\\.nuget\\packages\\": {}
+    "C:\\Users\\Dagon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\app\\Eventos.csproj",
+      "projectUniqueName": "E:\\HDD1B\\Sistemas\\UC\\app\\Eventos.csproj",
       "projectName": "Eventos",
-      "projectPath": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\app\\Eventos.csproj",
-      "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\app\\obj\\",
+      "projectPath": "E:\\HDD1B\\Sistemas\\UC\\app\\Eventos.csproj",
+      "packagesPath": "C:\\Users\\Dagon\\.nuget\\packages\\",
+      "outputPath": "E:\\HDD1B\\Sistemas\\UC\\app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
