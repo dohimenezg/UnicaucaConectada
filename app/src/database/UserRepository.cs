@@ -14,7 +14,7 @@ public class UserRepository : IUserRepository
     {
         initDB();
     }
-    public Boolean saveUser(User newUser)
+    public bool saveUser(User newUser)
     {
         try
         {
@@ -27,7 +27,7 @@ public class UserRepository : IUserRepository
         }
 
     }
-    public Boolean deleteUser(User deletedUser)
+    public bool deleteUser(User deletedUser)
     {
         if (deletedUser == null)
         {
@@ -37,7 +37,7 @@ public class UserRepository : IUserRepository
 
         return ret.DeletedCount == 1 ? true : false;
     }
-    public Boolean updateUser(User updatedUser)
+    public bool updateUser(User updatedUser)
     {
         var filter = Builders<User>.Filter.Eq("id", updatedUser.id);
         var ret = collection.ReplaceOne(filter, updatedUser);

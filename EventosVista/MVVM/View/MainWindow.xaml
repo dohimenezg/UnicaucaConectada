@@ -4,53 +4,95 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EventosVista"
+        xmlns:viewModel="clr-namespace:EventosVista.MVVM.ViewModel"
         mc:Ignorable="d"
         Background="#102733"
         WindowStyle="None"
         Title="UnicaucaConectada" Height="720" Width="1280"
         ResizeMode="NoResize">
-
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
     <DockPanel>
         <Grid DockPanel.Dock="Top">
-            <TabPanel>
-                <RadioButton
-                             Height="50"
+            <StackPanel>
+                <Border Grid.ColumnSpan="2"
+                        Background="#252525"
+                        Height="25"
+                        MouseDown="Border_MouseDown">
+                    <Grid HorizontalAlignment="Stretch">
+                        <Label Content="Unicauca Conectada"
+                            Foreground="White"
+                            FontWeight="Bold"/>
+                        <StackPanel HorizontalAlignment="Right"
+                                    Orientation="Horizontal">
+                            <Button Content="🗕"
+                                    Width="20"
+                                    Height="20"
+                                    Background="Transparent"
+                                    Foreground="White"
+                                    BorderThickness="0"
+                                    Click="ButtonMinimize_Click"/>
+                            <Button Content="🞬"
+                                    Width="20"
+                                    Height="20"
+                                    Background="Transparent"
+                                    Foreground="White"
+                                    BorderThickness="0"
+                                    Click="CloseButton_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <StackPanel HorizontalAlignment="Left"
+                            Orientation="Horizontal"
+                            Margin="10">
+                    <RadioButton Height="70"
+                                 Foreground="White"
+                                 FontSize="14"
+                                 Style="{StaticResource MenuButtonTheme}"
+                                 IsChecked="True"
+                                 Command="{Binding EventViewComand}">
+                        <WrapPanel>
+                            <Image Source="/Images/logo.png" Width="60" Height="60" Margin="5"/>
+                            <TextBlock VerticalAlignment="Center" Text="Unicauca&#x0a;Conectada" Margin="5"/>
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Height="50"
+                                Foreground="White"
+                                FontSize="14"
+                                Style="{StaticResource MenuButtonTheme}" Margin="600,0,-600,0"
+                                Command="{Binding LogInViewComand}">
+                        <WrapPanel>
+                            <Image Source="/Images/plus.png" Width="30" Height="30" Margin="5"/>
+                            <TextBlock VerticalAlignment="Center" Text="Nuevo Evento" Margin="5"/>
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}">
-                    <WrapPanel>
-                        <Image Source="/Images/apps.png" Width="30" Height="30" Margin="5"/>
-                        <TextBlock Text="Unicauca&#x0a;Conectada" Margin="5"/>
-                    </WrapPanel>
-                </RadioButton>
-                <RadioButton Height="50"
+                             Style="{StaticResource MenuButtonTheme}" Margin="650,0,-650,0"
+                                 Command="{Binding LogInViewComand}">
+                        <WrapPanel>
+                            <Image Source="/Images/bell.png" Width="30" Height="30" Margin="5"/>
+                            <TextBlock VerticalAlignment="Center" Text="Notificaciones" Margin="5"/>
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Margin="750,0,-750,0">
-                    <WrapPanel>
-                        <Image Source="/Images/plus.png" Width="30" Height="30" Margin="5"/>
-                        <TextBlock Text="Nuevo Evento" Margin="5"/>
-                    </WrapPanel>
-                </RadioButton>
-                <RadioButton Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Margin="750,0,-750,0">
-                    <WrapPanel>
-                        <Image Source="/Images/bell.png" Width="30" Height="30" Margin="5"/>
-                        <TextBlock Text="Notificaciones" Margin="5"/>
-                    </WrapPanel>
-                </RadioButton>
-                <RadioButton Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Margin="750,0,-750,0">
-                    <WrapPanel>
-                        <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
-                        <TextBlock Text="Iniciar Sesión" Margin="5"/>
-                    </WrapPanel>
-                </RadioButton>
-            </TabPanel>
+                             Style="{StaticResource MenuButtonTheme}" Margin="700,0,-700,0"
+                                 Command="{Binding LogInViewComand}">
+                        <WrapPanel>
+                            <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
+                            <TextBlock VerticalAlignment="Center" Text="Iniciar Sesión" Margin="5"/>
+                        </WrapPanel>
+                    </RadioButton>
+                </StackPanel>
+                <Border Height="600">
+                    <ContentControl Margin="100,50,100,0"
+                                    Content="{Binding CurrentView}"/>
+                </Border>
+            </StackPanel>
         </Grid>
     </DockPanel>
 </Window>

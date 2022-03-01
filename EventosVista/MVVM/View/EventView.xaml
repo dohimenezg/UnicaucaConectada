@@ -8,21 +8,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.DataContext>
-        <viewmodel:MainViewModel/>
+        <viewmodel:EventViewModel/>
     </UserControl.DataContext>
-    <StackPanel>
-        <TextBlock Text="Eventos"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Eventos"
                    Foreground="White"
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="10"/>
-        <StackPanel>
-            <ListView Background="#252525"
+        <DockPanel Grid.Row="1">
+            <Grid DockPanel.Dock="Top">
+                <ListView Background="#252525"
                   ScrollViewer.CanContentScroll="False"
-                  ItemsSource="{Binding Songs}"
+                  ItemsSource="{Binding Events}"
                   Style="{StaticResource ListStyle}">
-
-            </ListView>
-        </StackPanel>
-    </StackPanel>
+                </ListView>
+            </Grid>
+        </DockPanel>
+    </Grid>
 </UserControl>

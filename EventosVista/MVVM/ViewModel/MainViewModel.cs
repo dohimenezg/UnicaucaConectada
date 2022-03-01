@@ -1,37 +1,42 @@
-﻿using EventosVista.MVVM.Model;
-using System.Collections.ObjectModel;
+﻿using EventosVista.MVVM.Core;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace EventosVista.MVVM.ViewModel
 {
-    internal class MainViewModel
+    internal class MainViewModel : ObservableObject
     {
-        public ObservableCollection<Item> Songs { get; set; }
-        public MainViewModel()
+        public RelayCommand EventViewComand { get; set; }
+        public RelayCommand LogInViewComand { get; set; }
+        public EventViewModel EventVM { get; set; }
+        public LogInViewModel LogInVM { get; set; }
+        private object _currentView;
+
+        public object CurrentView
         {
-            Songs = new ObservableCollection<Item>();
-            PopulateCollection();
+            get { return _currentView; }
+            set { _currentView = value;
+                onPropertyChanged();
+            }
         }
 
-        void PopulateCollection()
+        public MainViewModel()
         {
-            var item = new Item();
-            Item[] Items = new Item[3];
+            EventVM = new EventViewModel();
+            LogInVM = new LogInViewModel();
 
-            Items[0] = new Item();
-            Items[0].Id = "1";
-            Items[0].Name = "Test1";
-            Items[1] = new Item();
-            Items[1].Id = "2";
-            Items[1].Name = "Test2";
-            Items[2] = new Item();
-            Items[2].Id = "3";
-            Items[2].Name = "Test3";
+            CurrentView = EventVM;
 
-            for (int i = 0; i < 3; i++)
-            {
-                var track = Items[i];
-                Songs.Add(track);
-            }
+            EventViewComand = new RelayCommand(o =>{
+                CurrentView = EventVM;
+            });
+
+            LogInViewComand = new RelayCommand(o => {
+                CurrentView = LogInVM;
+            });
         }
     }
 }
