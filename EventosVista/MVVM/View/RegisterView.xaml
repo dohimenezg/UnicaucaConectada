@@ -32,144 +32,107 @@
                 </Image>
                 <Ellipse Grid.Row="0" Width="140" Height="140" Stroke="#FFCE00" StrokeThickness="4" Margin="0 10 0 0"></Ellipse>
                 <StackPanel Grid.Row="1">
-                    <TextBox Margin="0 10 0 0" HorizontalAlignment="Center" Width="190" Padding="5" >
-                        <TextBox.Style>
-                            <Style TargetType="{x:Type TextBox}">
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type TextBox}">
-                                            <Border CornerRadius="10">
-                                                <Grid>
-                                                    <TextBox Margin="1" 
-                                     Text="{TemplateBinding Text}"
-                                     BorderThickness="0"
-                                     FontSize="15"
-                                     VerticalAlignment="Center"
-                                     Padding="5"
-                                     Foreground="Black"
-                                     x:Name="UsernameBox">
-                                                        <TextBox.Resources>
-                                                            <Style TargetType="{x:Type Border}">
-                                                                <Setter Property="CornerRadius" Value="5"/>
-                                                            </Style>
-                                                        </TextBox.Resources>
-                                                    </TextBox>
-                                                    <TextBlock IsHitTestVisible="false"
-                                       Text="Nombre Completo"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Margin="15 0 0 0"
-                                       FontSize="15"
-                                       Foreground="DarkGray"
-                                       Grid.Column="1">
-                                                        <TextBlock.Style>
-                                                            <Style TargetType="{x:Type TextBlock}">
-                                                                <Style.Triggers>
-                                                                    <DataTrigger Binding="{Binding Text, ElementName=UsernameBox}" Value="">
-                                                                        <Setter Property="Visibility" Value="Visible"></Setter>
-                                                                    </DataTrigger>
-                                                                </Style.Triggers>
-                                                                <Setter Property="Visibility" Value="Hidden"></Setter>
-                                                            </Style>
-                                                        </TextBlock.Style>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Nombre: " 
+                                   Grid.Column="0" 
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Right"
+                                   Margin="0 15 3 0"
+                                   FontSize="20"
+                                   Foreground="#FFCE00"
+                                   FontWeight="DemiBold"/>
+                        <TextBox x:Name="nameField"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"
+                                 Width="200"
+                                 Grid.Row="0"
+                                 Grid.Column="1"
+                                 Margin="0 15 0 0"
+                                 FontSize="18"
+                                 Foreground="#283F4D">
+                        </TextBox>
+                        <TextBlock Text="Usuario: " 
+                                   Grid.Row="1"
+                                   Grid.Column="0" 
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Right"
+                                   Margin="0 15 3 0"
+                                   FontSize="20"
+                                   Foreground="#FFCE00"
+                                   FontWeight="DemiBold"/>
+                        <TextBox x:Name="usernameField"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"
+                                 Width="200"
+                                 Grid.Row="1"
+                                 Grid.Column="1"
+                                 Margin="0 15 0 0"
+                                 FontSize="18"
+                                 Foreground="#283F4D">
+                        </TextBox>
 
-                                                    </TextBlock>
-                                                </Grid>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </TextBox.Style>
-                    </TextBox>
-                    <TextBox Margin="0 10 0 0" HorizontalAlignment="Center" Width="190" Padding="5" Style="{StaticResource ModernTextBox}">
-                    </TextBox>
-                    <!--WaterMark PasswordBox-->
-                    <PasswordBox Name="pb" Margin="0 10 0 0" HorizontalAlignment="Center" Width="190" Padding="5" FontSize="15" Height="30" VerticalAlignment="Center">
-                        <PasswordBox.Style>
-                            <Style TargetType="PasswordBox">
-                                <Setter Property="Height" Value="23"/>
-                                <Setter Property="local:PasswordBoxMonitor.IsMonitoring" Value="True"/>
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type PasswordBox}">
-
-                                            <Border Name="Bd" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
-                                                <Grid >
-                                                    <ScrollViewer x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                                                    <StackPanel Orientation="Horizontal" Visibility="Collapsed" Name="myStackPanel">
-                                                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="DarkGray" Text="Contraseña" Margin="15 0 0 0" FontSize="15"/>
-                                                    </StackPanel>
-                                                </Grid>
-                                            </Border>
-                                            <ControlTemplate.Triggers>
-                                                <Trigger Property="IsEnabled" Value="false">
-                                                    <Setter Property="Visibility" TargetName="myStackPanel" Value="Collapsed"/>
-                                                </Trigger>
-                                                <Trigger Property="local:PasswordBoxMonitor.PasswordLength" Value="0">
-                                                    <Setter Property="Visibility" TargetName="myStackPanel" Value="Visible"/>
-                                                </Trigger>
-                                            </ControlTemplate.Triggers>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </PasswordBox.Style>
-                    </PasswordBox>
-
-                    <TextBox Margin="0 10 0 0" HorizontalAlignment="Center" Width="190" Padding="5" >
-                        <TextBox.Style>
-                            <Style TargetType="{x:Type TextBox}">
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type TextBox}">
-                                            <Border CornerRadius="10">
-                                                <Grid>
-                                                    <TextBox Margin="1" 
-                                     Text="{TemplateBinding Text}"
-                                     BorderThickness="0"
-                                     FontSize="15"
-                                     VerticalAlignment="Center"
-                                     Padding="5"
-                                     Foreground="Black"
-                                     x:Name="UsernameBox">
-                                                        <TextBox.Resources>
-                                                            <Style TargetType="{x:Type Border}">
-                                                                <Setter Property="CornerRadius" Value="5"/>
-                                                            </Style>
-                                                        </TextBox.Resources>
-                                                    </TextBox>
-                                                    <TextBlock IsHitTestVisible="false"
-                                       Text="Email"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Margin="15 0 0 0"
-                                       FontSize="15"
-                                       Foreground="DarkGray"
-                                       Grid.Column="1">
-                                                        <TextBlock.Style>
-                                                            <Style TargetType="{x:Type TextBlock}">
-                                                                <Style.Triggers>
-                                                                    <DataTrigger Binding="{Binding Text, ElementName=UsernameBox}" Value="">
-                                                                        <Setter Property="Visibility" Value="Visible"></Setter>
-                                                                    </DataTrigger>
-                                                                </Style.Triggers>
-                                                                <Setter Property="Visibility" Value="Hidden"></Setter>
-                                                            </Style>
-                                                        </TextBlock.Style>
-
-                                                    </TextBlock>
-                                                </Grid>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                            </Style>
-                        </TextBox.Style>
-                    </TextBox>
+                        <TextBlock Text="Contrasena: " 
+                                   Grid.Row="2"  
+                                   Grid.Column="0"
+                                   HorizontalAlignment="Right"
+                                   Margin="0 15 3 0"
+                                   FontSize="20"
+                                   Foreground="#FFCE00"
+                                   FontWeight="DemiBold"/>
+                        <PasswordBox x:Name="passwordField"
+                                 HorizontalAlignment="Left" 
+                                 VerticalAlignment="Center"
+                                 Width="200"
+                                 Padding="1"
+                                 Grid.Row="2" 
+                                 Grid.Column="1"
+                                 Margin="0 10 0 0"
+                                 FontSize="18"
+                                 Foreground="#283F4D">
+                        </PasswordBox>
+                        <TextBlock Text="Email: " 
+                                   Grid.Column="0"
+                                   Grid.Row="3"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Right"
+                                   Margin="0 15 3 0"
+                                   FontSize="20"
+                                   Foreground="#FFCE00"
+                                   FontWeight="DemiBold"/>
+                        <TextBox x:Name="emailField"
+                                 KeyUp="emailField_KeyUp"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Center"
+                                 Width="200"
+                                 Grid.Row="3"
+                                 Grid.Column="1"
+                                 Margin="0 15 0 0"
+                                 FontSize="18"
+                                 Foreground="#283F4D">
+                        </TextBox>
+                    </Grid>
                 </StackPanel>
                 <StackPanel Grid.Row="2" Margin="0 15 0 0">
-                    <Button Content="Registrarse" Background="#FFCE00" Foreground="#102733" Padding="5" HorizontalAlignment="Center" Width="100" FontSize="15">
+                    <Button x:Name="RegisterButton"
+                            Click="RegisterButton_Click"
+                            Content="Registrarse" 
+                            Background="#FFCE00" 
+                            Foreground="#102733" 
+                            Padding="15" 
+                            HorizontalAlignment="Center" 
+                            Width="120"
+                            FontSize="15"
+                            FontWeight="Bold">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>

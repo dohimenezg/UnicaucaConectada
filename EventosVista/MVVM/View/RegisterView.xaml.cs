@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,33 @@ namespace EventosVista.MVVM.View
         public RegisterView()
         {
             InitializeComponent();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            User user = new User();
+            user.nombre = this.nameField.Text;
+            user.nombre_usuario = this.usernameField.Text;
+            user.contrasena = this.passwordField.Password;
+            user.correo = this.emailField.Text;
+
+            IUserRepository userRepository = new UserRepository();
+            userRepository.saveUser(user);
+        }
+
+        private void emailField_KeyUp(object sender, KeyEventArgs e)
+        {
+            Regex reg = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"+ "@"+ @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
+            string email = this.emailField.Text;
+
+            if (reg.IsMatch(email))
+            {
+                this.emailField.SetCurrentValue(ForegroundProperty, Brushes.Green);
+            }
+            else
+            {
+                this.emailField.SetCurrentValue(ForegroundProperty, Brushes.Red);
+            }
         }
     }
 }

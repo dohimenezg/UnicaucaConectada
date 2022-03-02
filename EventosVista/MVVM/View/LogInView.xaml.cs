@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventosVista.MVVM.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace EventosVista.MVVM.View
         public LogInView()
         {
             InitializeComponent();
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(Authentication.AuthenticateUser(this.usernameField.Text, this.passwordField.Password))
+            {
+                MessageBox.Show("User found!");
+            }
+            else
+            {
+                MessageBox.Show("Fuck you!");
+            }
+            
         }
     }
 }
