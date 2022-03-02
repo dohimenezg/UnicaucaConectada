@@ -19,7 +19,7 @@ namespace EventosVista.MVVM.View
     /// <summary>
     /// Interaction logic for RegisterView.xaml
     /// </summary>
-    public partial class RegisterView : Page
+    public partial class RegisterView : UserControl
     {
         public RegisterView()
         {
@@ -36,6 +36,12 @@ namespace EventosVista.MVVM.View
 
             IUserRepository userRepository = new UserRepository();
             userRepository.saveUser(user);
+
+            this.nameField.Text = String.Empty;
+            this.usernameField.Text = String.Empty;
+            this.passwordField.Password = String.Empty;
+            this.emailField.Text = String.Empty;
+            this.emailField.SetCurrentValue(BackgroundProperty, Brushes.White);
         }
 
         private void emailField_KeyUp(object sender, KeyEventArgs e)
@@ -45,11 +51,11 @@ namespace EventosVista.MVVM.View
 
             if (reg.IsMatch(email))
             {
-                this.emailField.SetCurrentValue(ForegroundProperty, Brushes.Green);
+                this.emailField.SetCurrentValue(BackgroundProperty, Brushes.LightGreen);
             }
             else
             {
-                this.emailField.SetCurrentValue(ForegroundProperty, Brushes.Red);
+                this.emailField.SetCurrentValue(BackgroundProperty, Brushes.Salmon);
             }
         }
     }

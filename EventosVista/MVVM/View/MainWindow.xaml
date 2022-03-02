@@ -60,7 +60,7 @@
                     <RadioButton Height="50"
                                 Foreground="White"
                                 FontSize="14"
-                                Style="{StaticResource MenuButtonTheme}" Margin="600,0,-600,0"
+                                Style="{StaticResource MenuButtonTheme}" Margin="450,0,-600,0"
                                 Command="{Binding LogInViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/plus.png" Width="30" Height="30" Margin="5"/>
@@ -85,6 +85,16 @@
                         <WrapPanel>
                             <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
                             <TextBlock VerticalAlignment="Center" Text="Iniciar Sesión" Margin="5"/>
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Margin="720,0,-700,0"
+                                 Command="{Binding RegisterViewComand}">
+                        <WrapPanel>
+                            <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
+                            <TextBlock VerticalAlignment="Center" Text="Registrarse" Margin="5"/>
                         </WrapPanel>
                     </RadioButton>
                 </StackPanel>
