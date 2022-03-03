@@ -13,12 +13,11 @@ namespace EventosVista.MVVM.ViewModel
         public RelayCommand PostEventViewComand { get; set; }
         public RelayCommand LogInViewComand { get; set; }
         public RelayCommand RegisterViewComand { get; set; }
-        public RelayCommand PostEventViewComand { get; set; }
         public EventViewModel EventVM { get; set; }
         public PostEventViewModel PostEventVM { get; set; }
         public LogInViewModel LogInVM { get; set; }
         public RegisterViewModel RegisterVM { get; set; }
-        public PostEventViewModel PostEventVM { get; set; }
+
         private object _currentView;
 
         public object CurrentView

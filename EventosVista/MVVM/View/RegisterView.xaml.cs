@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventosVista.MVVM.Model.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,7 @@ namespace EventosVista.MVVM.View
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            if (anyFieldEmpty())
+            if (Utilities.anyFieldEmpty(RegisterFormGrid))
             {
                 MessageBox.Show("Hay campos que deben ser llenados");
                 return;
@@ -65,21 +66,6 @@ namespace EventosVista.MVVM.View
             {
                 this.emailField.SetCurrentValue(BackgroundProperty, Brushes.Salmon);
             }
-        }
-
-        private Boolean anyFieldEmpty()
-        {
-            foreach (var child in RegisterFormGrid.Children)
-            {
-                if (child is TextBox)
-                {
-                    if (string.IsNullOrEmpty(((TextBox)child).Text))
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
         }
     }
 }
