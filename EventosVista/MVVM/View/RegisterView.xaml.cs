@@ -28,6 +28,11 @@ namespace EventosVista.MVVM.View
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
+            if (anyFieldEmpty())
+            {
+                MessageBox.Show("Hay campos que deben ser llenados");
+                return;
+            }
             User user = new User();
             user.nombre = this.nameField.Text;
             user.nombre_usuario = this.usernameField.Text;
@@ -42,6 +47,8 @@ namespace EventosVista.MVVM.View
             this.passwordField.Password = String.Empty;
             this.emailField.Text = String.Empty;
             this.emailField.SetCurrentValue(BackgroundProperty, Brushes.White);
+
+            MessageBox.Show("Usuario registrado satisfactoriamente");
         }
 
         private void emailField_KeyUp(object sender, KeyEventArgs e)
@@ -57,6 +64,21 @@ namespace EventosVista.MVVM.View
             {
                 this.emailField.SetCurrentValue(BackgroundProperty, Brushes.Salmon);
             }
+        }
+
+        private Boolean anyFieldEmpty()
+        {
+            foreach (var child in RegisterFormGrid.Children)
+            {
+                if (child is TextBox)
+                {
+                    if (string.IsNullOrEmpty(((TextBox)child).Text))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }
