@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\julia\Documents\UnicaucaConectada\EventosVista\obj\Debug\net6.0-windows\
+E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\
 EventosVista
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\julia\Documents\UnicaucaConectada\EventosVista\App.xaml
+E:\HDD1B\Sistemas\UC\EventosVista\App.xaml
 7-1770455311
 
-241417712374
-2001055522860
+272121053038
+200-1683001024
 MVVM\View\EventView.xaml;MVVM\View\LogInView.xaml;MVVM\View\MainWindow.xaml;MVVM\View\PostEventView.xaml;MVVM\View\RegisterView.xaml;Theme\MenuButtonTheme.xaml;Theme\ThemeName.ListViewTheme.xaml;
 
-False
+True
 

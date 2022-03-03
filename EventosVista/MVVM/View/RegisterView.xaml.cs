@@ -33,6 +33,7 @@ namespace EventosVista.MVVM.View
                 MessageBox.Show("Hay campos que deben ser llenados");
                 return;
             }
+
             User user = new User();
             user.nombre = this.nameField.Text;
             user.nombre_usuario = this.usernameField.Text;

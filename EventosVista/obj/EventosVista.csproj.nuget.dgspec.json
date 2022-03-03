@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julia\\Documents\\UnicaucaConectada\\EventosVista\\EventosVista.csproj": {}
+    "E:\\HDD1B\\Sistemas\\UC\\EventosVista\\EventosVista.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julia\\Documents\\UnicaucaConectada\\EventosVista\\EventosVista.csproj": {
+    "E:\\HDD1B\\Sistemas\\UC\\EventosVista\\EventosVista.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\EventosVista\\EventosVista.csproj",
+        "projectUniqueName": "E:\\HDD1B\\Sistemas\\UC\\EventosVista\\EventosVista.csproj",
         "projectName": "EventosVista",
-        "projectPath": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\EventosVista\\EventosVista.csproj",
-        "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julia\\Documents\\UnicaucaConectada\\EventosVista\\obj\\",
+        "projectPath": "E:\\HDD1B\\Sistemas\\UC\\EventosVista\\EventosVista.csproj",
+        "packagesPath": "C:\\Users\\Dagon\\.nuget\\packages\\",
+        "outputPath": "E:\\HDD1B\\Sistemas\\UC\\EventosVista\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dagon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

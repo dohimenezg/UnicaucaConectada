@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using EventosVista.MVVM.Model;
+using System.Windows;
 using System.Windows.Input;
 
 namespace EventosVista
@@ -11,6 +12,7 @@ namespace EventosVista
         public MainWindow()
         {
             InitializeComponent();
+            ButtonHandler.MainWindow = this;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -29,6 +31,11 @@ namespace EventosVista
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

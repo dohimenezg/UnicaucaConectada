@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\julia\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\julia\\.nuget\\packages"
+      "C:\\Users\\Dagon\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Dagon\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

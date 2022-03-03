@@ -62,13 +62,13 @@
                                 Foreground="White"
                                 FontSize="14"
                                 Style="{StaticResource MenuButtonTheme}" Margin="550,0,50,0"
-                                Command="{Binding LogInViewComand}">
+                                Command="{Binding PostEventViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/plus.png" Width="30" Height="30" Margin="5"/>
                             <TextBlock VerticalAlignment="Center" Text="Nuevo Evento" Margin="5"/>
                         </WrapPanel>
                     </RadioButton>
-                    <RadioButton Height="50"
+                    <RadioButton x:Name="LoginButton" Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
@@ -78,7 +78,7 @@
                             <TextBlock VerticalAlignment="Center" Text="Iniciar Sesión" Margin="5"/>
                         </WrapPanel>
                     </RadioButton>
-                    <RadioButton Height="50"
+                    <RadioButton x:Name="SignUpButton" Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
@@ -86,6 +86,19 @@
                         <WrapPanel>
                             <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
                             <TextBlock VerticalAlignment="Center" Text="Registrarse" Margin="5"/>
+                        </WrapPanel>
+                    </RadioButton>
+                    <RadioButton x:Name="LogoutButton" 
+                                 IsEnabled="False"
+                                 Visibility="Collapsed"
+                                 Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
+                                 Click="LogoutButton_Click">
+                        <WrapPanel>
+                            <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
+                            <TextBlock VerticalAlignment="Center" Text="Terminar Sesión" Margin="5"/>
                         </WrapPanel>
                     </RadioButton>
                 </StackPanel>

@@ -31,6 +31,7 @@ namespace EventosVista.MVVM.View
             if(Authentication.AuthenticateUser(this.usernameField.Text, this.passwordField.Password))
             {
                 MessageBox.Show("User found! User is "+ Session.GetInstance().user.nombre_usuario+" and Pass is: "+ Session.GetInstance().user.contrasena);
+
             }
             else
             {

@@ -12,9 +12,11 @@ namespace EventosVista.MVVM.ViewModel
         public RelayCommand EventViewComand { get; set; }
         public RelayCommand LogInViewComand { get; set; }
         public RelayCommand RegisterViewComand { get; set; }
+        public RelayCommand PostEventViewComand { get; set; }
         public EventViewModel EventVM { get; set; }
         public LogInViewModel LogInVM { get; set; }
         public RegisterViewModel RegisterVM { get; set; }
+        public PostEventViewModel PostEventVM { get; set; }
         private object _currentView;
 
         public object CurrentView
@@ -30,6 +32,7 @@ namespace EventosVista.MVVM.ViewModel
             EventVM = new EventViewModel();
             LogInVM = new LogInViewModel();
             RegisterVM = new RegisterViewModel();
+            PostEventVM = new PostEventViewModel();
 
             CurrentView = EventVM;
 
@@ -44,6 +47,11 @@ namespace EventosVista.MVVM.ViewModel
             RegisterViewComand = new RelayCommand(o =>
             {
                 CurrentView = RegisterVM;
+            });
+
+            PostEventViewComand = new RelayCommand(o =>
+            {
+                CurrentView = PostEventVM;
             });
         }
     }
