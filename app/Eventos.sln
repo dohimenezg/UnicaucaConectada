@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventos", "Eventos.csproj", "{B716E509-727E-4EAA-8290-6836A35BE8A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventosVista", "..\EventosVista\EventosVista.csproj", "{3B6AEDEC-5C76-4E72-9B3D-D608D0E4B2D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "uTest", "..\uTest\uTest.csproj", "{77F540BF-A5E6-4CDA-B7CA-67895F3454E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B716E509-727E-4EAA-8290-6836A35BE8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B716E509-727E-4EAA-8290-6836A35BE8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B716E509-727E-4EAA-8290-6836A35BE8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B716E509-727E-4EAA-8290-6836A35BE8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6AEDEC-5C76-4E72-9B3D-D608D0E4B2D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6AEDEC-5C76-4E72-9B3D-D608D0E4B2D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6AEDEC-5C76-4E72-9B3D-D608D0E4B2D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6AEDEC-5C76-4E72-9B3D-D608D0E4B2D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F540BF-A5E6-4CDA-B7CA-67895F3454E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F540BF-A5E6-4CDA-B7CA-67895F3454E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F540BF-A5E6-4CDA-B7CA-67895F3454E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F540BF-A5E6-4CDA-B7CA-67895F3454E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBF9EFFF-581B-4C25-9D49-1C37F64B13F5}
+	EndGlobalSection
+EndGlobal
