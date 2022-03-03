@@ -62,7 +62,7 @@
                                 Foreground="White"
                                 FontSize="14"
                                 Style="{StaticResource MenuButtonTheme}" Margin="550,0,50,0"
-                                Command="{Binding LogInViewComand}">
+                                Command="{Binding PostEventViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/plus.png" Width="30" Height="30" Margin="5"/>
                             <TextBlock VerticalAlignment="Center" Text="Nuevo Evento" Margin="5"/>
@@ -74,7 +74,7 @@
                              Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
                                  Command="{Binding LogInViewComand}">
                         <WrapPanel>
-                            <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
+                            <Image Source="/Images/login.png" Width="30" Height="30" Margin="5"/>
                             <TextBlock VerticalAlignment="Center" Text="Iniciar Sesión" Margin="5"/>
                         </WrapPanel>
                     </RadioButton>
@@ -84,7 +84,7 @@
                              Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
                                  Command="{Binding RegisterViewComand}">
                         <WrapPanel>
-                            <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
+                            <Image Source="/Images/signup.png" Width="30" Height="30" Margin="5"/>
                             <TextBlock VerticalAlignment="Center" Text="Registrarse" Margin="5"/>
                         </WrapPanel>
                     </RadioButton>

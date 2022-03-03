@@ -5,8 +5,180 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EventosVista.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="#283F4D"
+             FontFamily="/Fonts/#Roboto Slab">
     <Grid>
-            
+        <StackPanel VerticalAlignment="Stretch">
+            <TextBlock Text="Crear Evento"
+                       Foreground="White"
+                       Margin="10,5,0,0"
+                       FontSize="15"/>
+            <Grid Height="420">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="6*" ></RowDefinition>
+                        <RowDefinition Height="2*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="1">
+                        <Grid HorizontalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Título del Evento:" 
+                                       Grid.Column="0" 
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
+                                       Margin="0 0 15 15"
+                                       FontSize="14"
+                                       Foreground="LightGray"/>
+                            <TextBox x:Name="titleField"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Width="200"
+                                     Padding="1"
+                                     Grid.Row="0"
+                                     Grid.Column="1"
+                                     Margin="0 0 0 15"
+                                     FontSize="16"
+                                     Foreground="#283F4D"/>
+
+                            <TextBlock Text="Fecha de Inicio:" 
+                                       Grid.Row="1"
+                                       Grid.Column="0" 
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
+                                       Margin="0 0 15 15"
+                                       FontSize="14"
+                                       Foreground="LightGray"/>
+                            <DatePicker x:Name="initDateField"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Width="200"
+                                     Padding="1"
+                                     Grid.Row="1"
+                                     Grid.Column="1"
+                                     Margin="0 0 0 15"
+                                     FontSize="16"
+                                     Foreground="#283F4D"/>
+
+                            <TextBlock Text="Fecha de Finalización:" 
+                                       Grid.Row="2"
+                                       Grid.Column="0" 
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
+                                       Margin="0 0 15 15"
+                                       FontSize="14"
+                                       Foreground="LightGray"/>
+                            <DatePicker x:Name="endDateField"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Width="200"
+                                     Padding="1"
+                                     Grid.Row="2"
+                                     Grid.Column="1"
+                                     Margin="0 0 0 15"
+                                     FontSize="16"
+                                     Foreground="#283F4D"/>
+
+                            <TextBlock Text="Lugar del Evento:" 
+                                       Grid.Column="0"
+                                       Grid.Row="3"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
+                                       Margin="0 0 15 15"
+                                       FontSize="14"
+                                       Foreground="LightGray"/>
+                            <TextBox x:Name="placeField"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Width="200"
+                                     Padding="1"
+                                     Grid.Row="3"
+                                     Grid.Column="1"
+                                     Margin="0 0 0 15"
+                                     FontSize="16"
+                                     Foreground="#283F4D"/>
+
+                            <TextBlock Text="Descripción del Evento:" 
+                                       Grid.Column="0"
+                                       Grid.Row="4"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Right"
+                                       Margin="0 6 15 15"
+                                       FontSize="14"
+                                       Foreground="LightGray"/>
+                            <TextBox x:Name="descriptField"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Width="200"
+                                     Padding="1"
+                                     Grid.Row="4"
+                                     Grid.Column="1"
+                                     Margin="0 0 0 15"
+                                     FontSize="16"
+                                     Foreground="#283F4D"/>
+
+                            <TextBlock Text="Banner del Evento:" 
+                                       Grid.Column="0"
+                                       Grid.Row="5"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Right"
+                                       Margin="0 0 15 15"
+                                       FontSize="14"
+                                       Foreground="LightGray"/>
+                            <Button Content="Buscar Imágen"
+                                    Grid.Column="1"
+                                    Grid.Row="5"
+                                    Background="#102733" 
+                                    Foreground="#FFCE00"
+                                    Padding="5"
+                                    Margin="0 0 0 15"
+                                    HorizontalAlignment="Left" 
+                                    Width="140" 
+                                    FontSize="14">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Margin="0 15 0 0">
+                        <Button x:Name="PostEventButton"
+                                Content="Publicar Evento" 
+                                Background="#FFCE00" 
+                                Foreground="#102733" 
+                                Padding="10" 
+                                HorizontalAlignment="Center" 
+                                Width="150"
+                                FontSize="14">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </StackPanel>
     </Grid>
 </UserControl>

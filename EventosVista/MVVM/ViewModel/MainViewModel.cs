@@ -10,9 +10,11 @@ namespace EventosVista.MVVM.ViewModel
     internal class MainViewModel : ObservableObject
     {
         public RelayCommand EventViewComand { get; set; }
+        public RelayCommand PostEventViewComand { get; set; }
         public RelayCommand LogInViewComand { get; set; }
         public RelayCommand RegisterViewComand { get; set; }
         public EventViewModel EventVM { get; set; }
+        public PostEventViewModel PostEventVM { get; set; }
         public LogInViewModel LogInVM { get; set; }
         public RegisterViewModel RegisterVM { get; set; }
         private object _currentView;
@@ -28,6 +30,7 @@ namespace EventosVista.MVVM.ViewModel
         public MainViewModel()
         {
             EventVM = new EventViewModel();
+            PostEventVM = new PostEventViewModel();
             LogInVM = new LogInViewModel();
             RegisterVM = new RegisterViewModel();
 
@@ -35,6 +38,10 @@ namespace EventosVista.MVVM.ViewModel
 
             EventViewComand = new RelayCommand(o =>{
                 CurrentView = EventVM;
+            });
+
+            PostEventViewComand = new RelayCommand(o => {
+                CurrentView = PostEventVM;
             });
 
             LogInViewComand = new RelayCommand(o => {

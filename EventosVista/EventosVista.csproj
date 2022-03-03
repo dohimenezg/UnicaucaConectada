@@ -13,10 +13,13 @@
     <None Remove="Images\bell.png" />
     <None Remove="Images\calendar.png" />
     <None Remove="Images\heart.png" />
+    <None Remove="Images\login.png" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\logout.png" />
     <None Remove="Images\marker.png" />
     <None Remove="Images\plus.png" />
     <None Remove="Images\share.png" />
+    <None Remove="Images\signup.png" />
     <None Remove="Images\stock.jpg" />
     <None Remove="Images\user.png" />
   </ItemGroup>
@@ -26,15 +29,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\RobotoSlab.ttf"/>
+    <Resource Include="Fonts\RobotoSlab.ttf" />
     <Resource Include="Images\apps.png" />
     <Resource Include="Images\bell.png" />
     <Resource Include="Images\calendar.png" />
     <Resource Include="Images\heart.png" />
+    <Resource Include="Images\login.png" />
     <Resource Include="Images\logo.png" />
+    <Resource Include="Images\logout.png" />
     <Resource Include="Images\marker.png" />
     <Resource Include="Images\plus.png" />
     <Resource Include="Images\share.png" />
+    <Resource Include="Images\signup.png" />
     <Resource Include="Images\stock.jpg" />
     <Resource Include="Images\user.png" />
   </ItemGroup>

@@ -61,4 +61,3 @@ E:\HDD1B\Sistemas\UC\app\obj\Debug\net6.0\Eventos.AssemblyInfo.cs
 E:\HDD1B\Sistemas\UC\app\obj\Debug\net6.0\Eventos.csproj.CoreCompileInputs.cache
 E:\HDD1B\Sistemas\UC\app\obj\Debug\net6.0\Eventos.csproj.CopyComplete
 E:\HDD1B\Sistemas\UC\app\obj\Debug\net6.0\Eventos.genruntimeconfig.cache
-C:\Users\julia\Documents\UnicaucaConectada\app\obj\Debug\net6.0\Eventos.csproj.AssemblyReference.cache
