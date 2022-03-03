@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\RobotoSlab.ttf" />
     <None Remove="Images\apps.png" />
     <None Remove="Images\bell.png" />
     <None Remove="Images\calendar.png" />
@@ -25,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\RobotoSlab.ttf"/>
     <Resource Include="Images\apps.png" />
     <Resource Include="Images\bell.png" />
     <Resource Include="Images\calendar.png" />
