@@ -28,6 +28,7 @@ namespace EventosVista.MVVM.Model
 
             if (user.contrasena == password)
             {
+                Session.GetInstance().user = user;
                 return true;
             }
             return false;

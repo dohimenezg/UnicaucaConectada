@@ -30,11 +30,11 @@ namespace EventosVista.MVVM.View
         {
             if(Authentication.AuthenticateUser(this.usernameField.Text, this.passwordField.Password))
             {
-                MessageBox.Show("User found!");
+                MessageBox.Show("User found! User is "+ Session.GetInstance().user.nombre_usuario+" and Pass is: "+ Session.GetInstance().user.contrasena);
             }
             else
             {
-                MessageBox.Show("Fuck you!");
+                MessageBox.Show("Nombre de Usuario o Contrasena invalidos!");
             }
             
         }
