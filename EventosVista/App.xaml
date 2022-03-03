@@ -5,6 +5,7 @@
              xmlns:viewModel="clr-namespace:EventosVista.MVVM.ViewModel"
              xmlns:view="clr-namespace:EventosVista.MVVM.View"
              StartupUri="./MVVM/View/MainWindow.xaml">
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

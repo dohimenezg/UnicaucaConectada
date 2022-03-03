@@ -9,7 +9,8 @@
         Background="#102733"
         WindowStyle="None"
         Title="UnicaucaConectada" Height="720" Width="1280"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        FontFamily="/Fonts/#Roboto Slab">
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
@@ -22,8 +23,8 @@
                         MouseDown="Border_MouseDown">
                     <Grid HorizontalAlignment="Stretch">
                         <Label Content="Unicauca Conectada"
-                            Foreground="White"
-                            FontWeight="Bold"/>
+                               Foreground="White"
+                               FontWeight="Bold"/>
                         <StackPanel HorizontalAlignment="Right"
                                     Orientation="Horizontal">
                             <Button Content="🗕"
@@ -54,13 +55,13 @@
                                  Command="{Binding EventViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/logo.png" Width="60" Height="60" Margin="5"/>
-                            <TextBlock VerticalAlignment="Center" Text="Unicauca&#x0a;Conectada" Margin="5"/>
+                            <TextBlock VerticalAlignment="Center" Text="Unicauca&#x0a;Conectada" Margin="5" FontSize="22"/>
                         </WrapPanel>
                     </RadioButton>
                     <RadioButton Height="50"
                                 Foreground="White"
                                 FontSize="14"
-                                Style="{StaticResource MenuButtonTheme}" Margin="450,0,-600,0"
+                                Style="{StaticResource MenuButtonTheme}" Margin="550,0,50,0"
                                 Command="{Binding LogInViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/plus.png" Width="30" Height="30" Margin="5"/>
@@ -70,17 +71,7 @@
                     <RadioButton Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Margin="650,0,-650,0"
-                                 Command="{Binding LogInViewComand}">
-                        <WrapPanel>
-                            <Image Source="/Images/bell.png" Width="30" Height="30" Margin="5"/>
-                            <TextBlock VerticalAlignment="Center" Text="Notificaciones" Margin="5"/>
-                        </WrapPanel>
-                    </RadioButton>
-                    <RadioButton Height="50"
-                             Foreground="White"
-                             FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Margin="700,0,-700,0"
+                             Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
                                  Command="{Binding LogInViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
@@ -90,7 +81,7 @@
                     <RadioButton Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Margin="720,0,-700,0"
+                             Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
                                  Command="{Binding RegisterViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
