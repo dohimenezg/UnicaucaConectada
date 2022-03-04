@@ -55,9 +55,13 @@ namespace EventosVista.MVVM.ViewModel
                 CurrentView = RegisterVM;
             });
         }
-        public void ContentControl_Click(object sender, RoutedEventArgs e)
+        public void HomeRouter()
         {
             CurrentView = EventVM;
+        }
+        public void RegisterRouter()
+        {
+            CurrentView = RegisterVM;
         }
     }
 }

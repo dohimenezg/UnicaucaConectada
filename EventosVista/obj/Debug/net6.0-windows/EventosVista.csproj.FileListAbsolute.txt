@@ -123,4 +123,3 @@ C:\Users\julia\Documents\UnicaucaConectada\EventosVista\obj\Debug\net6.0-windows
 C:\Users\julia\Documents\UnicaucaConectada\EventosVista\obj\Debug\net6.0-windows\ref\EventosVista.dll
 C:\Users\julia\Documents\UnicaucaConectada\EventosVista\obj\Debug\net6.0-windows\EventosVista.pdb
 C:\Users\julia\Documents\UnicaucaConectada\EventosVista\obj\Debug\net6.0-windows\EventosVista.genruntimeconfig.cache
-C:\Users\julia\Documents\UnicaucaConectada\EventosVista\obj\Debug\net6.0-windows\EventosVista.csproj.AssemblyReference.cache

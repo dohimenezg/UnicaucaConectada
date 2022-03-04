@@ -31,6 +31,7 @@ namespace EventosVista.MVVM.View
         {
             if (Utilities.anyFieldEmpty(RegisterFormGrid))
             {
+                e.Handled = true;
                 MessageBox.Show("Hay campos que deben ser llenados");
                 return;
             }
