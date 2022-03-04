@@ -29,6 +29,7 @@ namespace EventosVista.MVVM.View
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            e.Handled = true;
             if (Utilities.anyFieldEmpty(LoginFormGrid))
             {
                 MessageBox.Show("Hay campos que deben ser llenados");
@@ -37,6 +38,7 @@ namespace EventosVista.MVVM.View
             if(Authentication.AuthenticateUser(this.usernameField.Text, this.passwordField.Password))
             {
                 MessageBox.Show("User found! User is "+ Session.GetInstance().user.nombre_usuario+" and Pass is: "+ Session.GetInstance().user.contrasena);
+                e.Handled = false;
 
             }
             else

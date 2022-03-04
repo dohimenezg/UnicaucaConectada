@@ -110,6 +110,7 @@
                         </Button.Resources>
                     </Button>
                     <Button Content="Registrarse" 
+                            x:Name="register"
                             Background="#102733" 
                             Foreground="#FFCE00" 
                             Margin="0 15 0 0" 

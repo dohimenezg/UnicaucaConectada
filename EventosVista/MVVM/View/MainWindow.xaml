@@ -82,7 +82,8 @@
                 <StackPanel HorizontalAlignment="Left"
                             Orientation="Horizontal"
                             Margin="10">
-                    <RadioButton Height="70"
+                    <RadioButton x:Name="HomeButton"
+                                 Height="70"
                                  Foreground="White"
                                  FontSize="14"
                                  Style="{StaticResource MenuButtonTheme}"
@@ -95,11 +96,11 @@
                     </RadioButton>
                     <RadioButton x:Name="NewEventButton"
                                 IsEnabled="False"
-                                Visibility="Hidden"
+                                Visibility="Collapsed"
                                 Height="50"
                                 Foreground="White"
                                 FontSize="14"
-                                Style="{StaticResource MenuButtonTheme}" Margin="550,0,50,0"
+                                Style="{StaticResource MenuButtonTheme}" Margin="700,0,50,0"
                                 Command="{Binding PostEventViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/plus.png" Width="30" Height="30" Margin="5"/>
@@ -109,7 +110,7 @@
                     <RadioButton x:Name="LoginButton" Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
+                             Style="{StaticResource MenuButtonTheme}" Margin="700,0,50,0"
                                  Command="{Binding LogInViewComand}">
                         <WrapPanel>
                             <Image Source="/Images/login.png" Width="30" Height="30" Margin="5"/>

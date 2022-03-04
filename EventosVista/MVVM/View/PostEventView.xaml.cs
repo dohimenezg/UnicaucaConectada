@@ -130,5 +130,10 @@ namespace EventosVista.MVVM.View
             }
             return imgByteArr;
         }
+
+        private void StackPanel_Click(object sender, RoutedEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

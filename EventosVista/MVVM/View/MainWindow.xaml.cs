@@ -1,6 +1,7 @@
 ﻿using EventosVista.MVVM.Model;
 using EventosVista.MVVM.ViewModel;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace EventosVista
@@ -38,11 +39,21 @@ namespace EventosVista
         {
             Session.GetInstance().user = null;
             VisualHandler.updateLogoutButtons();
+            ((MainViewModel)this.DataContext).HomeRouter();
         }
 
         private void ContentControl_Click(object sender, RoutedEventArgs e)
         {
-
+            if (e.OriginalSource is Button)
+            {
+                if (((Button)e.OriginalSource).Name.Equals("register"))
+                {
+                    ((MainViewModel)this.DataContext).RegisterRouter();
+                } else
+                {
+                    ((MainViewModel)this.DataContext).HomeRouter();
+                }
+            }
         }
     }
 }
