@@ -1,4 +1,5 @@
 ﻿using EventosVista.MVVM.Model;
+using EventosVista.MVVM.ViewModel;
 using System.Windows;
 using System.Windows.Input;
 
@@ -35,7 +36,7 @@ namespace EventosVista
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ((MainViewModel)this.DataContext).ContentControl_Click(sender,e);
         }
     }
 }

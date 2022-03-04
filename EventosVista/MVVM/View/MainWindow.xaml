@@ -138,7 +138,7 @@
                     </RadioButton>
                 </StackPanel>
                 <Border Height="600">
-                    <ContentControl Margin="100,50,100,0"
+                    <ContentControl Margin="100,50,100,0" ButtonBase.Click="LogoutButton_Click"
                                     Content="{Binding CurrentView}"/>
                 </Border>
             </StackPanel>

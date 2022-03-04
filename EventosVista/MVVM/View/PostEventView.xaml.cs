@@ -31,27 +31,28 @@ namespace EventosVista.MVVM.View
 
         private void PostEventButton_Click(object sender, RoutedEventArgs e)
         {
-            if (titleField.Text == null)
+            e.Handled = true;
+            if (string.IsNullOrEmpty(titleField.Text))
             {
                 MessageBox.Show("El evento debe tener un título");
                 return;
             }
-            if (initDateField.Text == null)
+            if (string.IsNullOrEmpty(initDateField.Text))
             {
                 MessageBox.Show("El evento debe tener una fecha de inicio");
                 return;
             }
-            if (endDateField.Text == null)
+            if (string.IsNullOrEmpty(endDateField.Text))
             {
                 MessageBox.Show("El evento debe tener una fecha de finalización");
                 return;
             }
-            if (endDateField.Text == null)
+            if (string.IsNullOrEmpty(endDateField.Text))
             {
                 MessageBox.Show("El evento debe tener un lugar");
                 return;
             }
-            if (descriptField.Text == null)
+            if (string.IsNullOrEmpty(descriptField.Text))
             {
                 MessageBox.Show("El evento debe tener una descripción");
                 return;
@@ -79,10 +80,12 @@ namespace EventosVista.MVVM.View
             {
                 MessageBox.Show("Evento agregado!");
             }
+            e.Handled = false;
         }
 
         private void SearchImageButton_Click(object sender, RoutedEventArgs e)
         {
+            e.Handled = true;
             try
             {
                 FileDialog fldlg = new OpenFileDialog();
