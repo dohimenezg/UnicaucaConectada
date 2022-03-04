@@ -135,13 +135,13 @@
                              Style="{StaticResource MenuButtonTheme}" Margin="0,0,50,0"
                                  Click="LogoutButton_Click">
                         <WrapPanel>
-                            <Image Source="/Images/user.png" Width="30" Height="30" Margin="5"/>
+                            <Image Source="/Images/logout.png" Width="30" Height="30" Margin="5"/>
                             <TextBlock VerticalAlignment="Center" Text="Terminar Sesión" Margin="5"/>
                         </WrapPanel>
                     </RadioButton>
                 </StackPanel>
                 <Border Height="600">
-                    <ContentControl x:Name="ContentPanel" Margin="100,50,100,0"
+                    <ContentControl Margin="100,50,100,0" ButtonBase.Click="ContentControl_Click"
                                     Content="{Binding CurrentView}"/>
                 </Border>
             </StackPanel>

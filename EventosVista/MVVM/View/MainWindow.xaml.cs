@@ -1,4 +1,5 @@
 ﻿using EventosVista.MVVM.Model;
+using EventosVista.MVVM.ViewModel;
 using System.Windows;
 using System.Windows.Input;
 
@@ -39,5 +40,9 @@ namespace EventosVista
             VisualHandler.updateLogoutButtons();
         }
 
+        private void ContentControl_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

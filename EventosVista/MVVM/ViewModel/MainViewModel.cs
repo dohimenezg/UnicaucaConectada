@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace EventosVista.MVVM.ViewModel
 {
@@ -53,6 +54,10 @@ namespace EventosVista.MVVM.ViewModel
             {
                 CurrentView = RegisterVM;
             });
+        }
+        public void ContentControl_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentView = EventVM;
         }
     }
 }
