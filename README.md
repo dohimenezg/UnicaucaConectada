@@ -101,7 +101,13 @@ git pull --rebase origin main
 git push origin main
 ```
 
+# Ejecución desde CLI
 
+Para correr el proyecto desde el CLI recordar tener previamente instalado [.NET 6.0](https://dotnet.microsoft.com/en-us/download). \
+Entre en la carpeta `EventosVista` y corra el siguiente comando:
+```
+dotnet run
+```
 
 # Equipo de desarrollo
 
