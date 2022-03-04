@@ -70,6 +70,39 @@ diferentes niveles de abstracción:
 
 ![Diagrama de componentes Backend](images/c4/componentesBackend.png)
 
+# Flujo de Trabajo Git (Estrategia de Intregracion Continua): 
+## Centralized Workflow
+Vamos a seguir buenas prácticas para integración continua como [centralized](https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow). 
+
+### 
+
+Para comenzar se debe clonar el proyecto (via HTTPS) con:
+```
+git clone https://github.com/dohimenezg/UnicaucaConectada.git
+```
+Luego vamos a seguir el siguiente proceso cada vez que se vayan a subir cambios a rama:
+
+### Subir cambios al repositorio remoto
+
+1. Seleccionar los cambios a guardar
+```
+git add .
+```
+2. Guardar los cambios localmente con un commit siendo descriptivo con la tarea/refactor/cambio que se realizo
+```
+git commit -m "Login Button added to GUI and Login Button Logic implemented"
+```
+3. Como es un flujo centralizado se deben descargar los cambios de la rama principal antes de subir los propios
+```
+git pull --rebase origin main
+```
+4. Subir los cambios a la rama principal
+```
+git push origin main
+```
+
+
+
 # Equipo de desarrollo
 
 El equipo de desarrollo de Unicauca Conetada esta integrado por:  
