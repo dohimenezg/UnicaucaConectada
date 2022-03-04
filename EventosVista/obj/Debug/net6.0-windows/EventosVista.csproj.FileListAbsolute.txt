@@ -50,7 +50,6 @@ E:\HDD1B\Sistemas\UC\EventosVista\bin\Debug\net6.0-windows\runtimes\win\native\s
 E:\HDD1B\Sistemas\UC\EventosVista\bin\Debug\net6.0-windows\runtimes\linux\native\libmongocrypt.so
 E:\HDD1B\Sistemas\UC\EventosVista\bin\Debug\net6.0-windows\runtimes\osx\native\libmongocrypt.dylib
 E:\HDD1B\Sistemas\UC\EventosVista\bin\Debug\net6.0-windows\runtimes\win\native\mongocrypt.dll
-E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\EventosVista.csproj.AssemblyReference.cache
 E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\Theme\MenuButtonTheme.baml
 E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\Theme\ThemeName.ListViewTheme.baml
 E:\HDD1B\Sistemas\UC\EventosVista\obj\Debug\net6.0-windows\MVVM\View\EventView.g.cs

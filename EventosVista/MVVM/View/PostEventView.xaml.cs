@@ -62,7 +62,7 @@ namespace EventosVista.MVVM.View
             fechaFin = DateTime.Parse(endDateField.Text);
             lugar = placeField.Text;
             descrip = descriptField.Text;
-            Event evento = new Event(titulo, descrip, fechaInicio, fechaFin)
+            Event evento = new Event(titulo, descrip, fechaInicio, fechaFin, Session.GetInstance().user)
             {
                 lugar = lugar,
                 banner = getImageData()
