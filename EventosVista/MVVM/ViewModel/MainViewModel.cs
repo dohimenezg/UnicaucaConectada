@@ -30,6 +30,7 @@ namespace EventosVista.MVVM.ViewModel
 
         public MainViewModel()
         {
+            
             EventVM = new EventViewModel();
             PostEventVM = new PostEventViewModel();
             LogInVM = new LogInViewModel();

@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace EventosVista.MVVM.ViewModel
 {
-    internal class EventViewModel
+    public class EventViewModel
     {
         private EventRepository EventRepository;
         public ObservableCollection<Event> Events { get; set; }
