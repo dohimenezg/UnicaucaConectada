@@ -10,7 +10,8 @@
         WindowStyle="None"
         Title="UnicaucaConectada" Height="720" Width="1280"
         ResizeMode="NoResize"
-        FontFamily="/Fonts/#Roboto Slab">
+        FontFamily="/Fonts/#Roboto Slab"
+        Icon="/Images/logo.png">
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
@@ -28,19 +29,53 @@
                         <StackPanel HorizontalAlignment="Right"
                                     Orientation="Horizontal">
                             <Button Content="🗕"
-                                    Width="20"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Width="30"
                                     Height="20"
                                     Background="Transparent"
                                     Foreground="White"
                                     BorderThickness="0"
-                                    Click="ButtonMinimize_Click"/>
-                            <Button Content="🞬"
-                                    Width="20"
+                                    FontSize="14"
+                                    Click="ButtonMinimize_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                                            <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="{TemplateBinding Margin}"
+                                                              HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="Border" Property="Background" Value="Gray" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button Content="❌"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Margin="0"
+                                    Width="30"
                                     Height="20"
                                     Background="Transparent"
                                     Foreground="White"
                                     BorderThickness="0"
-                                    Click="CloseButton_Click"/>
+                                    Click="CloseButton_Click">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+                                            <ContentPresenter Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Margin="{TemplateBinding Margin}"
+                                                              HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="Border" Property="Background" Value="#B02525" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
                         </StackPanel>
                     </Grid>
                 </Border>
