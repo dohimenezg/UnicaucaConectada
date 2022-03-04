@@ -8,7 +8,7 @@ namespace EventosVista.MVVM.ViewModel
 {
     internal class LogInViewModel
     {
-        
+    
         
     }
 }

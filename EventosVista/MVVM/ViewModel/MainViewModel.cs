@@ -62,7 +62,6 @@ namespace EventosVista.MVVM.ViewModel
                 CurrentView = PostEventVM;
             });
 
-            
 
         }
     }

@@ -12,7 +12,6 @@ namespace EventosVista.MVVM.Model
     {
         public static MainWindow MainWindow { get; set; }
         
-
         public static void updateSessionButtons()
         {
             MainWindow.SignUpButton.IsEnabled = false;
@@ -23,8 +22,7 @@ namespace EventosVista.MVVM.Model
             MainWindow.LogoutButton.Visibility = Visibility.Visible;
             MainWindow.NewEventButton.IsEnabled = true;
             MainWindow.NewEventButton.Visibility = Visibility.Visible;
-           
-
+            
         }
 
         public static void updateLogoutButtons()
