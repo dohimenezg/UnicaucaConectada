@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "440a5c32-1360-4a2f-ba0d-17459a5ee96e": {
+      "ProjectGuid": "440a5c32-1360-4a2f-ba0d-17459a5ee96e",
+      "DisplayName": "EventosVista",
+      "ColorIndex": 0
+    },
+    "9feb3a6f-3676-4d0e-a3fd-8b0c17886977": {
+      "ProjectGuid": "9feb3a6f-3676-4d0e-a3fd-8b0c17886977",
+      "DisplayName": "EventosVista",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

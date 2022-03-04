@@ -1,12 +1,12 @@
 interface IUserRepository
 {
-    Boolean saveUser(User newUser);
+    bool saveUser(User newUser);
 
     User? findUser(string user_id);
 
-    Boolean deleteUser(User deleteUser);
+    bool deleteUser(User deleteUser);
 
-    Boolean updateUser(User updatedUser);
+    bool updateUser(User updatedUser);
 
     List<User> listAllUsers();
 

@@ -14,7 +14,7 @@ public class EventRepository : IEventRepository
     {
         initDB(); 
     }
-    public Boolean saveEvent(Event newEvent)
+    public bool saveEvent(Event newEvent)
     {
         try
         {
@@ -27,7 +27,7 @@ public class EventRepository : IEventRepository
         }
         
     }
-    public Boolean deleteEvent(Event deletedEvent)
+    public bool deleteEvent(Event deletedEvent)
     {
         if(deletedEvent == null)
         {
@@ -37,7 +37,7 @@ public class EventRepository : IEventRepository
 
         return ret.DeletedCount == 1? true: false;
     }
-    public Boolean updateEvent(Event updatedEvent)
+    public bool updateEvent(Event updatedEvent)
     {
         if (updatedEvent == null)
         {

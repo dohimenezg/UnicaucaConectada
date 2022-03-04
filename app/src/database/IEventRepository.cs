@@ -1,12 +1,12 @@
 interface IEventRepository
 {
-    Boolean saveEvent(Event newEvent);
+    bool saveEvent(Event newEvent);
 
-    Boolean updateEvent(Event newEvent);
+    bool updateEvent(Event newEvent);
 
     Event? findEvent(string event_id);
 
-    Boolean deleteEvent(Event newEvent);
+    bool deleteEvent(Event newEvent);
 
     List<Event> listAllEvents();
 
