@@ -40,5 +40,9 @@ namespace EventosVista
             VisualHandler.updateLogoutButtons();
         }
 
+        private void ContentControl_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
