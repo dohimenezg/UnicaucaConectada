@@ -4,10 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EventosVista.MVVM.View"
+             xmlns:viewModel="clr-namespace:EventosVista.MVVM.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              Background="#283F4D"
              FontFamily="/Fonts/#Roboto Slab">
+    <UserControl.DataContext>
+        <viewModel:MainViewModel/>
+    </UserControl.DataContext>
     <Grid>
         <StackPanel VerticalAlignment="Stretch">
             <TextBlock Text="Crear Evento"
@@ -152,7 +156,8 @@
                                     Margin="0 0 0 15"
                                     HorizontalAlignment="Left" 
                                     Width="140" 
-                                    FontSize="14">
+                                    FontSize="14"
+                                    Click="SearchImageButton_Click">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="5"/>
@@ -169,7 +174,8 @@
                                 Padding="10" 
                                 HorizontalAlignment="Center" 
                                 Width="150"
-                                FontSize="14">
+                                FontSize="14"
+                                Click="PostEventButton_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="5"/>
