@@ -58,7 +58,10 @@
                             <TextBlock VerticalAlignment="Center" Text="Unicauca&#x0a;Conectada" Margin="5" FontSize="22"/>
                         </WrapPanel>
                     </RadioButton>
-                    <RadioButton Height="50"
+                    <RadioButton x:Name="NewEventButton"
+                                IsEnabled="False"
+                                Visibility="Hidden"
+                                Height="50"
                                 Foreground="White"
                                 FontSize="14"
                                 Style="{StaticResource MenuButtonTheme}" Margin="550,0,50,0"
@@ -88,7 +91,7 @@
                             <TextBlock VerticalAlignment="Center" Text="Registrarse" Margin="5"/>
                         </WrapPanel>
                     </RadioButton>
-                    <RadioButton x:Name="LogoutButton" 
+                    <RadioButton x:Name="LogoutButton"
                                  IsEnabled="False"
                                  Visibility="Collapsed"
                                  Height="50"
@@ -103,7 +106,7 @@
                     </RadioButton>
                 </StackPanel>
                 <Border Height="600">
-                    <ContentControl Margin="100,50,100,0"
+                    <ContentControl x:Name="ContentPanel" Margin="100,50,100,0"
                                     Content="{Binding CurrentView}"/>
                 </Border>
             </StackPanel>

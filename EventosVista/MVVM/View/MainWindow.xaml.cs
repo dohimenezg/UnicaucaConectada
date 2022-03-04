@@ -12,7 +12,7 @@ namespace EventosVista
         public MainWindow()
         {
             InitializeComponent();
-            ButtonHandler.MainWindow = this;
+            VisualHandler.MainWindow = this;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -35,7 +35,9 @@ namespace EventosVista
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Session.GetInstance().user = null;
+            VisualHandler.updateLogoutButtons();
         }
+
     }
 }

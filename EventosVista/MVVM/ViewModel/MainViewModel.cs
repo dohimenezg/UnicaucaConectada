@@ -1,4 +1,5 @@
 ﻿using EventosVista.MVVM.Core;
+using EventosVista.MVVM.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EventosVista.MVVM.ViewModel
 {
-    internal class MainViewModel : ObservableObject
+    class MainViewModel : ObservableObject
     {
         public RelayCommand EventViewComand { get; set; }
         public RelayCommand PostEventViewComand { get; set; }
@@ -30,6 +31,7 @@ namespace EventosVista.MVVM.ViewModel
 
         public MainViewModel()
         {
+            
             EventVM = new EventViewModel();
             PostEventVM = new PostEventViewModel();
             LogInVM = new LogInViewModel();
@@ -59,6 +61,9 @@ namespace EventosVista.MVVM.ViewModel
             {
                 CurrentView = PostEventVM;
             });
+
+            
+
         }
     }
 }
