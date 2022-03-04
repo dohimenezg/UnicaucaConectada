@@ -47,11 +47,11 @@
 									   FontSize="22"/>
                                     <StackPanel Orientation="Horizontal" Margin="20,5,5,5">
                                         <Image Source="/Images/calendar.png" Width="30" Height="30" Margin="0,0,20,0"/>
-                                        <TextBlock Text="{Binding fecha_inicio, StringFormat=g, ConverterCulture=es-CO}" Foreground="#C1CBD1"
+                                        <TextBlock Text="{Binding fecha_inicio, StringFormat=d, ConverterCulture=es-CO}" Foreground="#C1CBD1"
 									   FontSize="18"/>
                                         <TextBlock Text="  -  " Foreground="#C1CBD1"
 									   FontSize="18"/>
-                                        <TextBlock Text="{Binding fecha_final, StringFormat=g, ConverterCulture=es-CO}" Foreground="#C1CBD1"
+                                        <TextBlock Text="{Binding fecha_final, StringFormat=d, ConverterCulture=es-CO}" Foreground="#C1CBD1"
 									   FontSize="18"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal" Margin="20,5,5,5">
