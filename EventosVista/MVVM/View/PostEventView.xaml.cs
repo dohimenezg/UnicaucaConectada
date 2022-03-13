@@ -90,7 +90,7 @@ namespace EventosVista.MVVM.View
             {
                 FileDialog fldlg = new OpenFileDialog();
                 fldlg.InitialDirectory = Environment.SpecialFolder.MyPictures.ToString();
-                fldlg.Filter = "Image File (*.jpg;*.bmp;*.gif)|*.jpg;*.bmp;*.gif";
+                fldlg.Filter = "Image File (*.jpg;*.bmp;*.png)|*.jpg;*.bmp;*.png";
                 fldlg.ShowDialog();
                 {
                     imageName = fldlg.FileName;
