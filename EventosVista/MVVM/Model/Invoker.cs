@@ -1,4 +1,4 @@
-﻿using EventosVista.MVVM.Command;
+﻿using EventosVista.MVVM.ICommand;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +9,30 @@ namespace EventosVista.MVVM.Model
 {
     internal class Invoker
     {
-        private ICommand _command;
+        private ICommand.ICommand _command;
+        private static Invoker instance;
 
-        public Invoker()
+        private Invoker()
         {
 
         }
 
-        public void setCommand(ICommand command)
+        public static Invoker getInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Invoker(); 
+            }
+                
+            return instance;
+        }
+
+        public void setCommand(ICommand.ICommand command)
         {
             this._command = command;
         }
 
-        public ICommand GetCommand()
+        public ICommand.ICommand GetCommand()
         {
             return this._command;
         }

@@ -1,4 +1,6 @@
-﻿using EventosVista.MVVM.Model.Utils;
+﻿using EventosVista.MVVM.ICommand;
+using EventosVista.MVVM.Model;
+using EventosVista.MVVM.Model.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,14 +38,17 @@ namespace EventosVista.MVVM.View
                 return;
             }
 
-            User user = new User();
-            user.nombre = this.nameField.Text;
-            user.nombre_usuario = this.usernameField.Text;
-            user.contrasena = this.passwordField.Password;
-            user.correo = this.emailField.Text;
+           User user = new User()
+           {
+                nombre = this.nameField.Text,
+                nombre_usuario = this.usernameField.Text,
+                contrasena = this.passwordField.Password,
+                correo = this.emailField.Text
+           };
 
-            IUserRepository userRepository = new UserRepository();
-            userRepository.saveUser(user);
+            Invoker invoker = Invoker.getInstance();
+            invoker.setCommand(new SaveCommand(user));
+            invoker.execute();
 
             this.nameField.Text = String.Empty;
             this.usernameField.Text = String.Empty;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventosVista.MVVM.Command
+namespace EventosVista.MVVM.ICommand
 {
     internal interface ICommand
     {

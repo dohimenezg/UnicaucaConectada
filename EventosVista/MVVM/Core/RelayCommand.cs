@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace EventosVista.MVVM.Core
 {
-    class RelayCommand : ICommand
+    class RelayCommand : System.Windows.Input.ICommand
     {
         private Action<object> _execute;
         private Func<object, bool> _canExecute;
