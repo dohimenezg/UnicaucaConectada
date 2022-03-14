@@ -1,4 +1,5 @@
-﻿using EventosVista.MVVM.Model;
+﻿using EventosVista.MVVM.ICommand;
+using EventosVista.MVVM.Model;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -17,7 +18,10 @@ namespace EventosVista.MVVM.ViewModel
 
         void PopulateCollection()
         {
-            List<Event> list = EventRepository.listAllEvents();
+            FindAllCommand findAllCommand = new FindAllCommand();
+            Invoker.getInstance().setCommand(findAllCommand);
+            Invoker.getInstance().execute();   
+            List<Event> list = findAllCommand.getEvents();
 
             foreach (Event e in list)
             {
