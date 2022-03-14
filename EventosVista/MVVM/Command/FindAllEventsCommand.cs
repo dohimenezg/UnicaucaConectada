@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 
 namespace EventosVista.MVVM.ICommand
 {
-    internal class FindAllCommand : ICommand
+    internal class FindAllEventsCommand : ICommand
     {
         private List<Event> events;
 
-        private IEventRepository eventRepository;
+        private IEventRepository _eventRepository;
 
-        public FindAllCommand()
+        public FindAllEventsCommand()
         {
             events = new List<Event>();
-            eventRepository = RepositoryFactory.getInstance().GetEventRepository();
+            _eventRepository = RepositoryFactory.getInstance().GetEventRepository();
         }
 
         public void Execute()
         {
-            events = eventRepository.listAllEvents();
+            events = _eventRepository.listAllEvents();
         }
 
         public List<Event> getEvents()

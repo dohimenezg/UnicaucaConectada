@@ -1,4 +1,5 @@
-﻿using EventosVista.MVVM.Model;
+﻿using EventosVista.MVVM.ICommand;
+using EventosVista.MVVM.Model;
 using EventosVista.MVVM.Model.Utils;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,12 @@ namespace EventosVista.MVVM.View
                 MessageBox.Show("Hay campos que deben ser llenados");
                 return;
             }
-            if(Authentication.AuthenticateUser(this.usernameField.Text, this.passwordField.Password))
+
+            AuthenticateUserCommand authUserCmd = new AuthenticateUserCommand(this.usernameField.Text, this.passwordField.Password);
+            Invoker.getInstance().setCommand(authUserCmd);
+            Invoker.getInstance().execute();
+
+            if(authUserCmd.response)
             {
                 MessageBox.Show("Bienvenido! "+ Session.GetInstance().user.nombre_usuario);
                 e.Handled = false;

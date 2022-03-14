@@ -18,7 +18,7 @@ namespace EventosVista.MVVM.ViewModel
 
         void PopulateCollection()
         {
-            FindAllCommand findAllCommand = new FindAllCommand();
+            FindAllEventsCommand findAllCommand = new FindAllEventsCommand();
             Invoker.getInstance().setCommand(findAllCommand);
             Invoker.getInstance().execute();   
             List<Event> list = findAllCommand.getEvents();
