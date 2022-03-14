@@ -6,6 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using EventosVista.MVVM.Model;
 using System.IO;
+using EventosVista.MVVM.ICommand;
 
 namespace EventosVista.MVVM.View
 {
@@ -76,7 +77,11 @@ namespace EventosVista.MVVM.View
             endDateField.Text = "";
             placeField.Text = "";
             descriptField.Text = "";
-            if (EventRepository.saveEvent(evento))
+
+            SaveCommand saveEvent = new SaveCommand(evento);
+            Invoker.getInstance().setCommand(saveEvent);
+            Invoker.getInstance().execute();
+            if (saveEvent.response)
             {
                 MessageBox.Show("Evento agregado!");
             }

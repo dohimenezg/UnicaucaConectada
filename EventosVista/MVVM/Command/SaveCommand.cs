@@ -12,11 +12,15 @@ namespace EventosVista.MVVM.ICommand
         private Object toSaveItem;
         private IUserRepository _userRepository;
         private IEventRepository _eventRepository;
+
+        public Boolean response { get; set; }
         public SaveCommand(Object obj)
         {   
             this.toSaveItem = obj;
-            
-            if(toSaveItem.GetType() == typeof(User))
+            this.response = false;
+
+
+            if (toSaveItem.GetType() == typeof(User))
             {
                 _userRepository = RepositoryFactory.getInstance().GetUserRepository();
             }
@@ -29,11 +33,11 @@ namespace EventosVista.MVVM.ICommand
         {
             if (toSaveItem.GetType() == typeof(User))
             {
-                _userRepository.saveUser((User)toSaveItem);
+                response = _userRepository.saveUser((User)toSaveItem);
             }
             else if (toSaveItem.GetType() == typeof(Event))
             {
-                _eventRepository.saveEvent((Event)toSaveItem);
+                response = _eventRepository.saveEvent((Event)toSaveItem);
             }
         }
     }

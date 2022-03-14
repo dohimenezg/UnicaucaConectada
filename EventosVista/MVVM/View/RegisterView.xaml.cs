@@ -46,17 +46,20 @@ namespace EventosVista.MVVM.View
                 correo = this.emailField.Text
            };
 
-            Invoker invoker = Invoker.getInstance();
-            invoker.setCommand(new SaveCommand(user));
-            invoker.execute();
+            SaveCommand saveUser = new SaveCommand(user);
+            Invoker.getInstance().setCommand(saveUser);
+            Invoker.getInstance().execute();
 
             this.nameField.Text = String.Empty;
             this.usernameField.Text = String.Empty;
             this.passwordField.Password = String.Empty;
             this.emailField.Text = String.Empty;
             this.emailField.SetCurrentValue(BackgroundProperty, Brushes.White);
-
-            MessageBox.Show("Usuario registrado satisfactoriamente");
+            if (saveUser.response)
+            {
+                MessageBox.Show("Usuario registrado satisfactoriamente");
+            }
+            
         }
 
         private void emailField_KeyUp(object sender, KeyEventArgs e)
