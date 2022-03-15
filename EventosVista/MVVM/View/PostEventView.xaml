@@ -175,7 +175,7 @@
                                 HorizontalAlignment="Center" 
                                 Width="150"
                                 FontSize="14"
-                                Click="PostEventButton_Click">
+                                Click="PostEventButton_ClickAsync">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="5"/>

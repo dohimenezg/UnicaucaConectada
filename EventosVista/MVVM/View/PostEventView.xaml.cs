@@ -7,6 +7,8 @@ using System.Windows.Media;
 using EventosVista.MVVM.Model;
 using System.IO;
 using EventosVista.MVVM.ICommand;
+using EventosVista.MVVM.Model.Repository;
+using System.Threading.Tasks;
 
 namespace EventosVista.MVVM.View
 {
@@ -21,16 +23,18 @@ namespace EventosVista.MVVM.View
         string lugar = "";
         string descrip = "";
         string imageName = "";
+        FireBaseUploader fbu;
 
         private EventRepository EventRepository;
         public PostEventView()
         {
             InitializeComponent();
             EventRepository = new EventRepository();
+            fbu = new FireBaseUploader();
 
         }
 
-        private void PostEventButton_Click(object sender, RoutedEventArgs e)
+        private async void PostEventButton_ClickAsync(object sender, RoutedEventArgs e)
         {
             e.Handled = true;
             if (string.IsNullOrEmpty(titleField.Text))
@@ -63,10 +67,12 @@ namespace EventosVista.MVVM.View
             fechaFin = DateTime.Parse(endDateField.Text);
             lugar = placeField.Text;
             descrip = descriptField.Text;
+            await fbu.UploadFile(imageName);
+
             Event evento = new Event(titulo, descrip, fechaInicio, fechaFin, Session.GetInstance().user)
             {
                 lugar = lugar,
-                banner = getImageData()
+                banner = fbu.latestUpload
             };
             titulo = "";
             lugar = "";
@@ -77,6 +83,7 @@ namespace EventosVista.MVVM.View
             endDateField.Text = "";
             placeField.Text = "";
             descriptField.Text = "";
+            fbu.latestUpload = "";
 
             SaveCommand saveEvent = new SaveCommand(evento);
             Invoker.getInstance().setCommand(saveEvent);

@@ -36,6 +36,6 @@ public class Event
     public string lugar { get; set; }
 
     [BsonElement("banner")]
-    public byte[] banner { get; set; }
+    public string banner { get; set; }
 
 }
