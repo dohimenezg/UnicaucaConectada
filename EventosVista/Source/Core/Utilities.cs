@@ -9,22 +9,20 @@ namespace EventosVista.Source.Core
 {
     public static class Utilities
     {
-        public static bool anyFieldEmpty(Panel panel)
+        public static bool AnyFieldEmpty(Panel panel)
         {
             foreach (var child in panel.Children)
             {
-                if (child is TextBox)
+                if (child is TextBox box)
                 {
-                    if (string.IsNullOrEmpty(((TextBox)child).Text))
+                    if (string.IsNullOrEmpty(box.Text))
                     {
                         return true;
+                        
                     }
-                } else if (child is DatePicker)
+                } else if (child is DatePicker picker && string.IsNullOrEmpty(picker.Text))
                 {
-                    if (string.IsNullOrEmpty(((DatePicker)child).Text))
-                    {
-                        return true;
-                    }
+                  return true;
                 }
                 
             }

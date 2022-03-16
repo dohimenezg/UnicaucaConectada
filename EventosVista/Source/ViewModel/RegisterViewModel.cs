@@ -22,10 +22,10 @@ namespace EventosVista.Source.ViewModel
             };
 
             SaveCommand saveUser = new SaveCommand(user);
-            Invoker.getInstance().setCommand(saveUser);
-            Invoker.getInstance().execute();
+            Invoker.GetInstance().SetCommand(saveUser);
+            Invoker.GetInstance().Execute();
 
-            if (saveUser.response)
+            if (saveUser.Response)
             {
                 MessageBox.Show("Usuario registrado satisfactoriamente");
                 return true;

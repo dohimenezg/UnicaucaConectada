@@ -8,7 +8,7 @@ namespace EventosVista.Source.ViewModel
 {
     internal class PostEventViewModel
     {
-        FireBaseUploader fbu;
+        readonly FireBaseUploader fbu;
         public PostEventViewModel()
         {
             fbu = new FireBaseUploader();
@@ -31,9 +31,9 @@ namespace EventosVista.Source.ViewModel
             fbu.latestUpload = "";
 
             SaveCommand saveEvent = new SaveCommand(evento);
-            Invoker.getInstance().setCommand(saveEvent);
-            Invoker.getInstance().execute();
-            if (saveEvent.response)
+            Invoker.GetInstance().SetCommand(saveEvent);
+            Invoker.GetInstance().Execute();
+            if (saveEvent.Response)
             {
                 MessageBox.Show("Evento agregado!");
             }

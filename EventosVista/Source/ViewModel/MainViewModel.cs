@@ -21,7 +21,7 @@ namespace EventosVista.Source.ViewModel
             set
             {
                 _currentView = value;
-                onPropertyChanged();
+                OnPropertyChanged();
             }
         }
 

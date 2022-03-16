@@ -7,7 +7,7 @@ namespace EventosVista.Source.Core
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        protected void onPropertyChanged([CallerMemberName] string name = null)
+        protected void OnPropertyChanged([CallerMemberName] string name = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }

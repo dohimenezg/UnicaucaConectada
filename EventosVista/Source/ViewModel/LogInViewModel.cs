@@ -9,10 +9,10 @@ namespace EventosVista.Source.ViewModel
         public bool UserLogin(string username, string password)
         {
             AuthenticateUserCommand authUserCmd = new AuthenticateUserCommand(username, password);
-            Invoker.getInstance().setCommand(authUserCmd);
-            Invoker.getInstance().execute();
+            Invoker.GetInstance().SetCommand(authUserCmd);
+            Invoker.GetInstance().Execute();
 
-            if (authUserCmd.response)
+            if (authUserCmd.Response)
             {
                 MessageBox.Show("Bienvenido! " + Session.GetInstance().User.Nombre_Usuario);
                 return true;
