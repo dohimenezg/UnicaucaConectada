@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "EventosVista/1.0.0": {
+      "UnicaucaConectada/1.0.0": {
         "dependencies": {
           "FirebaseStorage.net": "1.0.3",
           "MongoDB.Driver": "2.14.1"
         },
         "runtime": {
-          "EventosVista.dll": {}
+          "UnicaucaConectada.dll": {}
         }
       },
       "DnsClient/1.4.0": {
@@ -883,7 +883,7 @@
     }
   },
   "libraries": {
-    "EventosVista/1.0.0": {
+    "UnicaucaConectada/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
