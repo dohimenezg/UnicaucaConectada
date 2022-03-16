@@ -15,8 +15,6 @@ namespace EventosVista
         public MainWindow()
         {
             InitializeComponent();
-            VisualHandler.MainWindow = this;
-
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
