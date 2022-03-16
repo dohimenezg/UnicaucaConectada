@@ -15,7 +15,6 @@ namespace EventosVista
         public MainWindow()
         {
             InitializeComponent();
-            VisualHandler.MainWindow = this;
 
         }
 
