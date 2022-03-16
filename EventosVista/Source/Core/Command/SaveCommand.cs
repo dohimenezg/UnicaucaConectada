@@ -1,4 +1,5 @@
 ﻿using EventosVista.Source.Access;
+using EventosVista.Source.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace EventosVista.Source.Core.Command
 {
     internal class SaveCommand : ICommand
     {
-        private object toSaveItem;
-        private IUserRepository _userRepository;
-        private IEventRepository _eventRepository;
+        private readonly object toSaveItem;
+        private readonly IUserRepository _userRepository;
+        private readonly IEventRepository _eventRepository;
 
         public bool response { get; set; }
         public SaveCommand(object obj)

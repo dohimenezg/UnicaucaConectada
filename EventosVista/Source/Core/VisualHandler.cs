@@ -22,7 +22,7 @@ namespace EventosVista.Source.Core
             MainWindow.LogoutButton.Visibility = Visibility.Visible;
             MainWindow.NewEventButton.IsEnabled = true;
             MainWindow.NewEventButton.Visibility = Visibility.Visible;
-            //MainWindow.HomeButton.IsChecked = true;
+            
         }
 
         public static void updateLogoutButtons()
@@ -35,7 +35,7 @@ namespace EventosVista.Source.Core
             MainWindow.LogoutButton.Visibility = Visibility.Collapsed;
             MainWindow.NewEventButton.IsEnabled = false;
             MainWindow.NewEventButton.Visibility = Visibility.Collapsed;
-            //MainWindow.HomeButton.IsChecked = true;
+            
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using EventosVista.Source.Core.Command;
+using EventosVista.Source.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,10 @@ namespace EventosVista.Source.ViewModel
         {
             User user = new User()
             {
-                nombre = name,
-                nombre_usuario = username,
-                contrasena = password,
-                correo = email
+                Nombre = name,
+                Nombre_Usuario = username,
+                Contrasena = password,
+                Correo = email
             };
 
             SaveCommand saveUser = new SaveCommand(user);

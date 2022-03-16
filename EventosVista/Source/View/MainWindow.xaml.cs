@@ -39,16 +39,16 @@ namespace EventosVista
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            Session.GetInstance().user = null;
+            Session.GetInstance().User = null;
             VisualHandler.updateLogoutButtons();
             ((MainViewModel)this.DataContext).HomeRouter();
         }
 
         private void ContentControl_Click(object sender, RoutedEventArgs e)
         {
-            if (e.OriginalSource is Button)
+            if (e.OriginalSource is Button button)
             {
-                if (((Button)e.OriginalSource).Name.Equals("register"))
+                if (button.Name.Equals("register"))
                 {
                     ((MainViewModel)this.DataContext).RegisterRouter();
                 } else

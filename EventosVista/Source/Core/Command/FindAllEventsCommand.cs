@@ -1,4 +1,5 @@
 ﻿using EventosVista.Source.Access;
+using EventosVista.Source.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace EventosVista.Source.Core.Command
     {
         private List<Event> events;
 
-        private IEventRepository _eventRepository;
+        private readonly IEventRepository _eventRepository;
 
         public FindAllEventsCommand()
         {

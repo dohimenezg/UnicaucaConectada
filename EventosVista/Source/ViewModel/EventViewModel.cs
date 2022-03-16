@@ -1,4 +1,5 @@
 ﻿using EventosVista.Source.Core.Command;
+using EventosVista.Source.Model;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 

@@ -8,7 +8,7 @@ namespace EventosVista.Source.Model
 {
     internal class Session
     {
-        private static Session _instance;
+        private static Session? _instance;
 
         private Session() { }
 
@@ -16,13 +16,15 @@ namespace EventosVista.Source.Model
         {
             if (_instance == null)
             {
-                _instance = new Session();
-                _instance.user = null;
+                _instance = new Session
+                {
+                    User = null
+                };
             }
             return _instance;
         }
 
-        public User user { get; set; }
+        public User? User { get; set; }
 
     }
 }

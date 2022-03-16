@@ -20,13 +20,13 @@ namespace EventosVista.Source.ViewModel
 
             Event evento = new Event()
             {
-                titulo = title,
-                descripcion = desc,
-                fecha_inicio = start,
-                fecha_final = finish,
-                lugar = place,
-                organizador = Session.GetInstance().user,
-                banner = fbu.latestUpload
+                Titulo = title,
+                Descripcion = desc,
+                FechaInicio = start,
+                FechaFinal = finish,
+                Lugar = place,
+                Organizador = Session.GetInstance().User,
+                Banner = fbu.latestUpload
             };
             fbu.latestUpload = "";
 

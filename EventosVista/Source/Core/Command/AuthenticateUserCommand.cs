@@ -9,8 +9,8 @@ namespace EventosVista.Source.Core.Command
 {
     internal class AuthenticateUserCommand : ICommand
     {
-        private string username;
-        private string password;
+        private readonly string username;
+        private readonly string password;
         public bool response { get; set; }
         public AuthenticateUserCommand(string username, string password)
         {

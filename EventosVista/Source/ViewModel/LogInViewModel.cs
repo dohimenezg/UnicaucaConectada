@@ -14,7 +14,7 @@ namespace EventosVista.Source.ViewModel
 
             if (authUserCmd.response)
             {
-                MessageBox.Show("Bienvenido! " + Session.GetInstance().user.nombre_usuario);
+                MessageBox.Show("Bienvenido! " + Session.GetInstance().User.Nombre_Usuario);
                 return true;
             }
             else
