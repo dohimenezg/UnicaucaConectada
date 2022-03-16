@@ -101,7 +101,13 @@ git pull --rebase origin main
 git push origin main
 ```
 
+# Ejecución desde CLI
 
+Para correr el proyecto desde el CLI recordar tener previamente instalado [.NET 6.0](https://dotnet.microsoft.com/en-us/download). \
+Entre en la carpeta `EventosVista` y corra el siguiente comando:
+```
+dotnet run
+```
 
 # Equipo de desarrollo
 
@@ -109,4 +115,3 @@ El equipo de desarrollo de Unicauca Conetada esta integrado por:
 - [David Jiménez](https://github.com/dohimenezg)
 - [Julian Ordoñez](https://github.com/juleMay)
 - [Daniel Pastas](https://github.com/pdaniel102)
-
