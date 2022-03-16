@@ -40,7 +40,14 @@ namespace EventosVista
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             Session.GetInstance().user = null;
-            VisualHandler.updateLogoutButtons();
+            SignUpButton.IsEnabled = true;
+            SignUpButton.Visibility = Visibility.Visible;
+            LoginButton.IsEnabled = true;
+            LoginButton.Visibility = Visibility.Visible;
+            LogoutButton.IsEnabled = false;
+            LogoutButton.Visibility = Visibility.Collapsed;
+            NewEventButton.IsEnabled = false;
+            NewEventButton.Visibility = Visibility.Collapsed;
             ((MainViewModel)this.DataContext).HomeRouter();
         }
 
@@ -51,7 +58,20 @@ namespace EventosVista
                 if (((Button)e.OriginalSource).Name.Equals("register"))
                 {
                     ((MainViewModel)this.DataContext).RegisterRouter();
-                } else
+                }
+                else if (((Button)e.OriginalSource).Name.Equals("LoginButton"))
+                {
+                    SignUpButton.IsEnabled = false;
+                    SignUpButton.Visibility = Visibility.Collapsed;
+                    LoginButton.IsEnabled = false;
+                    LoginButton.Visibility = Visibility.Collapsed;
+                    LogoutButton.IsEnabled = true;
+                    LogoutButton.Visibility = Visibility.Visible;
+                    NewEventButton.IsEnabled = true;
+                    NewEventButton.Visibility = Visibility.Visible;
+                    ((MainViewModel)this.DataContext).HomeRouter();
+                }
+                else
                 {
                     ((MainViewModel)this.DataContext).HomeRouter();
                 }

@@ -22,7 +22,6 @@ namespace EventosVista.Source.Core
             if (user.contrasena == password)
             {
                 Session.GetInstance().user = user;
-                VisualHandler.updateSessionButtons();
                 return true;
             }
             return false;
