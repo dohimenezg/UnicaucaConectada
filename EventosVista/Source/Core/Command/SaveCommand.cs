@@ -1,4 +1,5 @@
 ﻿using EventosVista.Source.Access;
+using EventosVista.Source.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,15 @@ namespace EventosVista.Source.Core.Command
 {
     internal class SaveCommand : ICommand
     {
-        private object toSaveItem;
-        private IUserRepository _userRepository;
-        private IEventRepository _eventRepository;
+        private readonly object toSaveItem;
+        private readonly IUserRepository? _userRepository;
+        private readonly IEventRepository? _eventRepository;
 
-        public bool response { get; set; }
+        public bool Response { get; set; }
         public SaveCommand(object obj)
         {
             toSaveItem = obj;
-            response = false;
+            Response = false;
 
 
             if (toSaveItem.GetType() == typeof(User))
@@ -31,13 +32,13 @@ namespace EventosVista.Source.Core.Command
         }
         public void Execute()
         {
-            if (toSaveItem.GetType() == typeof(User))
+            if (toSaveItem.GetType() == typeof(User) && _userRepository != null)
             {
-                response = _userRepository.saveUser((User)toSaveItem);
+                Response = _userRepository.saveUser((User)toSaveItem);
             }
-            else if (toSaveItem.GetType() == typeof(Event))
+            else if (toSaveItem.GetType() == typeof(Event) && _eventRepository != null)
             {
-                response = _eventRepository.saveEvent((Event)toSaveItem);
+                Response = _eventRepository.saveEvent((Event)toSaveItem);
             }
         }
     }

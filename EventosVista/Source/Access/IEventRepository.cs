@@ -1,15 +1,19 @@
+using EventosVista.Source.Model;
 using System.Collections.Generic;
 
-interface IEventRepository
+namespace EventosVista.Source.Access
 {
-    bool saveEvent(Event newEvent);
+    interface IEventRepository
+    {
+        bool saveEvent(Event newEvent);
 
-    bool updateEvent(Event newEvent);
+        bool updateEvent(Event newEvent);
 
-    Event? findEvent(string event_id);
+        Event? findEvent(string event_id);
 
-    bool deleteEvent(Event newEvent);
+        bool deleteEvent(Event eventDeleted);
 
-    List<Event> listAllEvents();
+        List<Event> listAllEvents();
 
+    }
 }

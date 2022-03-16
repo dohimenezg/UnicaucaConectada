@@ -1,20 +1,24 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-public class User
+
+namespace EventosVista.Source.Model
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string id { get; set; }
+    public class User
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; } = string.Empty;
 
-    [BsonElement("name")]
-    public string nombre { get; set; }
+        [BsonElement("name")]
+        public string Nombre { get; set; } = string.Empty;
 
-    [BsonElement("username")]
-    public string nombre_usuario { get; set; }
+        [BsonElement("username")]
+        public string Nombre_Usuario { get; set; } = string.Empty;
 
-    [BsonElement("password")]
-    public string contrasena { get; set; }
+        [BsonElement("password")]
+        public string Contrasena { get; set; } = string.Empty;
 
-    [BsonElement("email")]
-    public string correo { get; set; }
+        [BsonElement("email")]
+        public string Correo { get; set; } = string.Empty;
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using EventosVista.Source.Core.Command;
+using EventosVista.Source.Model;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -16,8 +17,8 @@ namespace EventosVista.Source.ViewModel
         public void PopulateCollection()
         {
             FindAllEventsCommand findAllCommand = new FindAllEventsCommand();
-            Invoker.getInstance().setCommand(findAllCommand);
-            Invoker.getInstance().execute();
+            Invoker.GetInstance().SetCommand(findAllCommand);
+            Invoker.GetInstance().Execute();
             List<Event> list = findAllCommand.getEvents();
 
             foreach (Event e in list)

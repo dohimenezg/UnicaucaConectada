@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace EventosVista.Source.Core.Command
 {
-    internal class DeleteCommand
+    internal class DefaultCommand : ICommand
     {
+        public void Execute()
+        {
+            // Method intentionally left empty.
+        }
     }
 }

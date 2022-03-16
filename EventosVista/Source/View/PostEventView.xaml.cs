@@ -21,7 +21,7 @@ namespace EventosVista.Source.View
         private void PostEventButton_ClickAsync(object sender, RoutedEventArgs e)
         {
             e.Handled = true;
-            if (Utilities.anyFieldEmpty(PostEventFormGrid) || imageName.Equals(""))
+            if (Utilities.AnyFieldEmpty(PostEventFormGrid) || String.IsNullOrEmpty(imageName))
             {
                 MessageBox.Show("Hay campos que deben ser llenados");
                 return;

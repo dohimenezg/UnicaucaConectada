@@ -1,82 +1,87 @@
+using EventosVista.Source.Model;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 
-public class UserRepository : IUserRepository
+namespace EventosVista.Source.Access
 {
-
-    MongoClientSettings settings = MongoClientSettings.FromConnectionString("mongodb+srv://unicauca:conectada@unicaucaconectada.avvq7.mongodb.net/UnicaucaConectada?retryWrites=true&w=majority");
-    MongoClient client;
-    IMongoDatabase database;
-    IMongoCollection<User> collection;
-
-    public UserRepository()
+    public class UserRepository : IUserRepository
     {
-        initDB();
-    }
-    public Boolean saveUser(User newUser)
-    {
-        try
+
+        readonly MongoClientSettings settings = MongoClientSettings.FromConnectionString("mongodb+srv://unicauca:conectada@unicaucaconectada.avvq7.mongodb.net/UnicaucaConectada?retryWrites=true&w=majority");
+        MongoClient client;
+        IMongoDatabase database;
+        IMongoCollection<User> collection;
+
+        public UserRepository()
         {
-            collection.InsertOne(newUser);
-            return true;
+            initDB();
         }
-        catch (MongoWriteException e)
+        public Boolean saveUser(User newUser)
         {
-            return false;
-        }
+            try
+            {
+                collection.InsertOne(newUser);
+                return true;
+            }
+            catch (MongoWriteException e)
+            {
+                return false;
+            }
 
-    }
-    public Boolean deleteUser(User deletedUser)
-    {
-        if (deletedUser == null)
+        }
+        public Boolean deleteUser(User deletedUser)
         {
-            return false;
+            if (deletedUser == null)
+            {
+                return false;
+            }
+            var ret = collection.DeleteOne(c => c.Id == deletedUser.Id);
+
+            return ret.DeletedCount == 1;
         }
-        var ret = collection.DeleteOne(c => c.id == deletedUser.id);
+        public Boolean updateUser(User updatedUser)
+        {
+            var filter = Builders<User>.Filter.Eq("id", updatedUser.Id);
+            var ret = collection.ReplaceOne(filter, updatedUser);
 
-        return ret.DeletedCount == 1 ? true : false;
-    }
-    public Boolean updateUser(User updatedUser)
-    {
-        var filter = Builders<User>.Filter.Eq("id", updatedUser.id);
-        var ret = collection.ReplaceOne(filter, updatedUser);
+            return ret.ModifiedCount == 1;
+        }
 
-        return ret.ModifiedCount == 1 ? true : false;
-    }
+        public User? findUser(string user_id)
+        {
+            var ret = collection.Find(d => d.Nombre_Usuario == user_id);
+            return ret.FirstOrDefault() == null ? null : ret.First();
 
-    public User? findUser(string User_id)
-    {
-        var ret = collection.Find(d => d.nombre_usuario == User_id);
-        return ret.FirstOrDefault() == null ? null : ret.First();
+        }
 
-    }
+        public List<User> listAllUsers()
+        {
+            List<User> list = collection.Find(d => true).ToList();
 
-    public List<User> listAllUsers()
-    {
-        List<User> list = collection.Find(d => true).ToList();
-
-        return list;
-    }
+            return list;
+        }
 
 
 
-    private void initDB()
-    {
+        private void initDB()
+        {
 
-        var client = new MongoClient(settings);
+            var mongoClient = new MongoClient(settings);
 
-        var database = client.GetDatabase("unicauca_conectada");
+            var mongoDatabase = mongoClient.GetDatabase("unicauca_conectada");
 
-        var UsersDB = database.GetCollection<User>("users");
+            var UsersDB = mongoDatabase.GetCollection<User>("users");
 
-        this.client = client;
-        this.database = database;
-        this.collection = (IMongoCollection<User>)UsersDB;
+            this.client = mongoClient;
+            this.database = mongoDatabase;
+            this.collection = UsersDB;
 
-        var options = new CreateIndexOptions { Unique = true };
-        collection.Indexes.CreateOne("{ username : 1 }", options);
+            var options = new CreateIndexOptions { Unique = true };
+            collection.Indexes.CreateOne("{ username : 1 }", options);
+        }
     }
 }
+

@@ -39,7 +39,7 @@ namespace EventosVista
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            Session.GetInstance().user = null;
+            Session.GetInstance().User = null;
             SignUpButton.IsEnabled = true;
             SignUpButton.Visibility = Visibility.Visible;
             LoginButton.IsEnabled = true;
@@ -53,9 +53,9 @@ namespace EventosVista
 
         private void ContentControl_Click(object sender, RoutedEventArgs e)
         {
-            if (e.OriginalSource is Button)
+            if (e.OriginalSource is Button button)
             {
-                if (((Button)e.OriginalSource).Name.Equals("register"))
+                if (button.Name.Equals("register"))
                 {
                     ((MainViewModel)this.DataContext).RegisterRouter();
                 }

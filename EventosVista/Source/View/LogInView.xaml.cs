@@ -18,7 +18,7 @@ namespace EventosVista.Source.View
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             e.Handled = true;
-            if (Utilities.anyFieldEmpty(LoginFormGrid))
+            if (Utilities.AnyFieldEmpty(LoginFormGrid))
             {
                 MessageBox.Show("Hay campos que deben ser llenados");
                 return;

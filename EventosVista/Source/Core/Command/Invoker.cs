@@ -8,15 +8,15 @@ namespace EventosVista.Source.Core.Command
 {
     internal class Invoker
     {
-        private ICommand _command;
-        private static Invoker instance;
+        private ICommand _command = new DefaultCommand();
+        private static Invoker? instance;
 
         private Invoker()
         {
 
         }
 
-        public static Invoker getInstance()
+        public static Invoker GetInstance()
         {
             if (instance == null)
             {
@@ -26,7 +26,7 @@ namespace EventosVista.Source.Core.Command
             return instance;
         }
 
-        public void setCommand(ICommand command)
+        public void SetCommand(ICommand command)
         {
             _command = command;
         }
@@ -36,7 +36,7 @@ namespace EventosVista.Source.Core.Command
             return _command;
         }
 
-        public void execute()
+        public void Execute()
         {
             _command.Execute();
         }

@@ -8,7 +8,7 @@ namespace EventosVista.Source.Access
 {
     internal class RepositoryFactory
     {
-        private static RepositoryFactory instance;
+        private static RepositoryFactory? instance;
 
         private RepositoryFactory()
         {

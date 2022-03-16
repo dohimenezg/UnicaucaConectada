@@ -1,16 +1,17 @@
-﻿using EventosVista.Source.Model;
+﻿using EventosVista.Source.Access;
+using EventosVista.Source.Model;
 using System;
 
 namespace EventosVista.Source.Core
 {
-    internal class Authentication
+    internal static class Authentication
     {
 
         public static bool AuthenticateUser(string username, string password)
         {
 
             IUserRepository repo = new UserRepository();
-            User user;
+            User? user;
 
             user = repo.findUser(username);
 
@@ -19,9 +20,9 @@ namespace EventosVista.Source.Core
                 return false;
             }
 
-            if (user.contrasena == password)
+            if (user.Contrasena == password)
             {
-                Session.GetInstance().user = user;
+                Session.GetInstance().User = user;
                 return true;
             }
             return false;

@@ -21,7 +21,7 @@ namespace EventosVista.Source.View
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Utilities.anyFieldEmpty(RegisterFormGrid))
+            if (Utilities.AnyFieldEmpty(RegisterFormGrid))
             {
                 e.Handled = true;
                 MessageBox.Show("Hay campos que deben ser llenados");
