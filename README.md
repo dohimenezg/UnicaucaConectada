@@ -115,4 +115,3 @@ El equipo de desarrollo de Unicauca Conetada esta integrado por:
 - [David Jiménez](https://github.com/dohimenezg)
 - [Julian Ordoñez](https://github.com/juleMay)
 - [Daniel Pastas](https://github.com/pdaniel102)
-

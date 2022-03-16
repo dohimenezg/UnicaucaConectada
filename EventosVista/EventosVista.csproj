@@ -8,41 +8,42 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\RobotoSlab.ttf" />
-    <None Remove="Images\apps.png" />
-    <None Remove="Images\bell.png" />
-    <None Remove="Images\calendar.png" />
-    <None Remove="Images\heart.png" />
-    <None Remove="Images\login.png" />
-    <None Remove="Images\logo.png" />
-    <None Remove="Images\logout.png" />
-    <None Remove="Images\marker.png" />
-    <None Remove="Images\plus.png" />
-    <None Remove="Images\share.png" />
-    <None Remove="Images\signup.png" />
-    <None Remove="Images\stock.jpg" />
-    <None Remove="Images\user.png" />
+    <None Remove="Resources\Fonts\RobotoSlab.ttf" />
+    <None Remove="Resources\Images\apps.png" />
+    <None Remove="Resources\Images\bell.png" />
+    <None Remove="Resources\Images\calendar.png" />
+    <None Remove="Resources\Images\heart.png" />
+    <None Remove="Resources\Images\login.png" />
+    <None Remove="Resources\Images\logo.png" />
+    <None Remove="Resources\Images\logout.png" />
+    <None Remove="Resources\Images\marker.png" />
+    <None Remove="Resources\Images\plus.png" />
+    <None Remove="Resources\Images\share.png" />
+    <None Remove="Resources\Images\signup.png" />
+    <None Remove="Resources\Images\stock.jpg" />
+    <None Remove="Resources\Images\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
     <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\RobotoSlab.ttf" />
-    <Resource Include="Images\apps.png" />
-    <Resource Include="Images\bell.png" />
-    <Resource Include="Images\calendar.png" />
-    <Resource Include="Images\heart.png" />
-    <Resource Include="Images\login.png" />
-    <Resource Include="Images\logo.png" />
-    <Resource Include="Images\logout.png" />
-    <Resource Include="Images\marker.png" />
-    <Resource Include="Images\plus.png" />
-    <Resource Include="Images\share.png" />
-    <Resource Include="Images\signup.png" />
-    <Resource Include="Images\stock.jpg" />
-    <Resource Include="Images\user.png" />
+    <Resource Include="Resources\Fonts\RobotoSlab.ttf" />
+    <Resource Include="Resources\Images\apps.png" />
+    <Resource Include="Resources\Images\bell.png" />
+    <Resource Include="Resources\Images\calendar.png" />
+    <Resource Include="Resources\Images\heart.png" />
+    <Resource Include="Resources\Images\login.png" />
+    <Resource Include="Resources\Images\logo.png" />
+    <Resource Include="Resources\Images\logout.png" />
+    <Resource Include="Resources\Images\marker.png" />
+    <Resource Include="Resources\Images\plus.png" />
+    <Resource Include="Resources\Images\share.png" />
+    <Resource Include="Resources\Images\signup.png" />
+    <Resource Include="Resources\Images\stock.jpg" />
+    <Resource Include="Resources\Images\user.png" />
   </ItemGroup>
 
 </Project>
