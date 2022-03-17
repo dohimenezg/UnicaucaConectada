@@ -70,7 +70,12 @@ diferentes niveles de abstracción:
 
 ![Diagrama de componentes Backend](images/c4/componentesBackend.png)
 
+# Diagrama de clases
+
+![Diagrama de clases](images/classes/uc.png)
+
 # Flujo de Trabajo Git (Estrategia de Intregracion Continua): 
+
 ## Centralized Workflow
 Vamos a seguir buenas prácticas para integración continua como [centralized](https://www.atlassian.com/git/tutorials/comparing-workflows#centralized-workflow). 
 
